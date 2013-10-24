@@ -20,6 +20,8 @@ package app.cores;
 import org.javalite.activeweb.controller_filters.HttpSupportFilter;
 import org.javalite.common.Collections;
 
+import java.util.Date;
+
 /**
  * User: surya
  * Date: 10/8/13
@@ -29,12 +31,16 @@ public class MainFilterC extends HttpSupportFilter {
 
     @Override
     public void before() {
-        System.out.println("sebelum dilakukan MainFilterC");
+        Date timespam = new Date();
+        long timesp = timespam.getTime();
+        System.out.println("sebelum dilakukan MainFilterC :: " + timesp);
     }
 
     @Override
     public void after() {
-        System.out.println("setelah dilakukan MainFilterC");
+        Date timespam = new Date();
+        long timesp = timespam.getTime();
+        System.out.println("setelah dilakukan MainFilterC :: " + timesp);
     }
 
     @Override
