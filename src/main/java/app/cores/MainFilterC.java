@@ -20,6 +20,7 @@ package app.cores;
 import org.javalite.activeweb.controller_filters.HttpSupportFilter;
 import org.javalite.common.Collections;
 
+import java.sql.Timestamp;
 import java.util.Date;
 
 /**
@@ -31,9 +32,8 @@ public class MainFilterC extends HttpSupportFilter {
 
     @Override
     public void before() {
-        Date timespam = new Date();
-        long timesp = timespam.getTime();
-        System.out.println("sebelum dilakukan MainFilterC :: " + timesp);
+        Timestamp timesp = new Timestamp(System.currentTimeMillis());
+        System.out.println("sebelum dilakukan MainFilterC :: " + timesp.getTime());
     }
 
     @Override

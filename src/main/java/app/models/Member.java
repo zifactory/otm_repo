@@ -15,21 +15,24 @@
  */
 
 /**
- * Namespace app.config
- * Class RouteConfig.java
- * @date 10/27/13
+ * Namespace app.models
+ * Class Member.java
+ * @date 10/28/13
  * @author Nanang Suryadi <nanang.ask@gmail.com>
  */
-package app.config;
+package app.models;
 
-import org.javalite.activeweb.AbstractRouteConfig;
-import org.javalite.activeweb.AppContext;
+import app.cores.IModel;
+import org.javalite.activejdbc.Model;
+import org.javalite.activejdbc.annotations.Table;
+import zi.helper.ZHelperModel;
 
-public class RouteConfig extends AbstractRouteConfig {
-    public void init(AppContext appContext) {
-        //route("/myposts").to(PostsController.class);
-//        route("/{action}/buku/{id}").to(BooksController.class);
-//        route("/{action}/{controller}/{id}").get();
-//        route("/{action}/listbuku").to(BookContentsController.class).get();
+@Table("member")
+public class Member extends Model implements IModel {
+
+    @Override
+    public boolean insert() {
+        setId(ZHelperModel.getGenerateID());
+        return super.insert();
     }
 }

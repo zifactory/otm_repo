@@ -7,15 +7,15 @@
 <@form action="create" method="post">
     <table style="margin:30px">
         <tr>
-            <td>Book author</td>
-            <td><input type="text" name="author" value="${(flasher.params.author)!}"> *
-                            <span class="error">${(flasher.errors.author)!}</span>
+            <td>Book deskripsi</td>
+            <td><input type="text" name="deskripsi" value="${(flasher.params.deskripsi)!}"> *
+                            <span class="error">${(flasher.errors.deskripsi)!}</span>
             </td>
         </tr>
         <tr>
             <td>Title:</td>
-            <td><input type="text" name="title" value="${(flasher.params.title)!}"> *
-                            <span class="error">${(flasher.errors.title)!}</span>
+            <td><input type="text" name="judul" value="${(flasher.params.judul)!}"> *
+                            <span class="error">${(flasher.errors.judul)!}</span>
             </td>
         </tr>
         <tr>

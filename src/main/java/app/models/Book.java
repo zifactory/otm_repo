@@ -16,14 +16,17 @@ limitations under the License.
 
 package app.models;
 
+import app.cores.IModel;
 import org.javalite.activejdbc.Model;
 import org.javalite.activejdbc.annotations.Table;
-
+import zi.helper.ZHelperModel;
 
 @Table("tb_buku")
-public class Book extends Model {
-    static {
-        validatePresenceOf("judul", "isbn");
-        //validatePresenceOf("author").message("Author must be provided");
+public class Book extends Model implements IModel {
+
+    @Override
+    public boolean insert() {
+        setId(ZHelperModel.getGenerateID());
+        return super.insert();
     }
 }

@@ -19,6 +19,7 @@ package app.controllers;
 import app.models.Book;
 import org.javalite.activeweb.AppController;
 import org.javalite.activeweb.annotations.POST;
+import zi.helper.ZHelperModel;
 
 public class BooksController extends AppController {
 
@@ -41,21 +42,31 @@ public class BooksController extends AppController {
     public void create() {
         Book book = new Book();
         book.fromMap(params1st());
-        if (!book.save()) {
+        //book.setId(ZHelperModel.getGenerateID());
+//        book.set("isbn", param("isbn"));
+//        book.set("deskripsi", param("deskripsi"));
+//        book.set("judul", param("judul"));
+
+        //System.out.println(book.save());
+
+        if (!book.insert()) {
             flash("message", "Something went wrong, please  fill out all fields");
             flash("errors", book.errors());
             flash("params", params1st());
+            System.out.println(params1st());
             redirect(BooksController.class, "new_form");
         } else {
-            flash("message", "New book was added: " + book.get("title"));
+            flash("message", "New book was added: " + book.get("judul"));
             redirect(BooksController.class);
         }
+
+        System.out.println(book.errors());
     }
 
     public void delete() {
 
         Book b = Book.findById(getId());
-        String title = b.getString("title");
+        String title = b.getString("judul");
         b.delete();
         flash("message", "Book: '" + title + "' was deleted");
         redirect(BooksController.class);

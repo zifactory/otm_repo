@@ -15,21 +15,15 @@
  */
 
 /**
- * Namespace app.config
- * Class RouteConfig.java
- * @date 10/27/13
+ * Namespace app.cores
+ * Class IModel.java
+ * @date 10/28/13
  * @author Nanang Suryadi <nanang.ask@gmail.com>
  */
-package app.config;
+package app.cores;
 
-import org.javalite.activeweb.AbstractRouteConfig;
-import org.javalite.activeweb.AppContext;
+public interface IModel {
 
-public class RouteConfig extends AbstractRouteConfig {
-    public void init(AppContext appContext) {
-        //route("/myposts").to(PostsController.class);
-//        route("/{action}/buku/{id}").to(BooksController.class);
-//        route("/{action}/{controller}/{id}").get();
-//        route("/{action}/listbuku").to(BookContentsController.class).get();
-    }
+    public boolean insert();
+
 }
