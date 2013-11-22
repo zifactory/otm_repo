@@ -16,7 +16,13 @@ limitations under the License.
 
 package app.config;
 
+import freemarker.core.Environment;
+import freemarker.template.TemplateException;
+import freemarker.template.TemplateExceptionHandler;
 import org.javalite.activeweb.freemarker.AbstractFreeMarkerConfig;
+import zi.helper.ZHelper;
+
+import java.io.Writer;
 
 /**
  * @author Igor Polevoy
@@ -26,5 +32,12 @@ public class FreeMarkerConfig extends AbstractFreeMarkerConfig {
     public void init() {
         //this is to override a strange FreeMarker default processing of numbers
         getConfiguration().setNumberFormat("0.##");
+        getConfiguration().setTemplateExceptionHandler(new templateExcep());
+    }
+
+    private class templateExcep implements TemplateExceptionHandler {
+        public void handleTemplateException(TemplateException te, Environment env, Writer out) throws TemplateException {
+            ZHelper.logInfo(FreeMarkerConfig.class, te.getMessage() + "| Writer : " + out);
+        }
     }
 }

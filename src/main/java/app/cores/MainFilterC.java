@@ -17,6 +17,7 @@ package app.cores;
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
 
+import org.javalite.activeweb.Configuration;
 import org.javalite.activeweb.controller_filters.HttpSupportFilter;
 import org.javalite.common.Collections;
 
@@ -45,8 +46,14 @@ public class MainFilterC extends HttpSupportFilter {
 
     @Override
     public void onException(Exception e) {
-        logError(e.toString(), e);
-        render("/system/error", Collections.map("message", "403 asolole"));
+        if (e.getCause() instanceof ClassNotFoundException) {
+           // logError(e.getMessage(), e);
+            logError("<<<<ClassNotFoundException>>>>");
+        }
 
+        if (Configuration.getEnv().equalsIgnoreCase("development")) {
+            render("/system/errordebug", Collections.map("Stacks", e)).noLayout();
+            return;
+        }
     }
 }

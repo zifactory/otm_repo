@@ -23,11 +23,21 @@
 package zi.helper;
 
 import java.sql.Timestamp;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class ZHelperModel {
 
     public static long getGenerateID() {
         Timestamp timestamp = new Timestamp(System.currentTimeMillis());
         return timestamp.getTime();
+    }
+
+    public static Map<String, Object> kategoriMaps(String judulKategori, List<Map> content) {
+        Map<String, Object> maps = new HashMap<String, Object>();
+        maps.put("judulKategori", judulKategori);
+        maps.put("content", content);
+        return maps;
     }
 }

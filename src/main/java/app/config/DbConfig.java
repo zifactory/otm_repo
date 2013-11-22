@@ -15,6 +15,7 @@ limitations under the License.
 */
 package app.config;
 
+import org.javalite.activejdbc.Base;
 import org.javalite.activeweb.AbstractDBConfig;
 import org.javalite.activeweb.AppContext;
 import zi.helper.ZHelperConfig;

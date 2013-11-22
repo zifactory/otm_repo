@@ -1,9 +1,15 @@
-<@content for="title">Simple Web App</@content>
-
-<h2>Simple ActiveWeb application</h2>
-
-<ul>
-    <li><@link_to controller="books">Books CRUD example</@link_to></li>
-    <li><@link_to controller="greeting">Dependency injection example</@link_to></li>
-</ul>
+<@content for="title">Kontent Edukasi Indonesia </@content>
+<#--<@render partial="/pages/card_wrapper" />-->
+<#--<#list kontent as book>-->
+<#--${book.judulKategori}<br/>-->
+<#--<#list book.content as cont>-->
+<#--${cont.image}<br/>-->
+<#--</#list>-->
+<#--</#list>-->
+<#--<@debug print=kontent/>-->
+${id!""}
+<#if authuser??>
+${authuser.getTokenS()}
+<#--<@debug print=authuser.getUser().password/>-->
+</#if>
 

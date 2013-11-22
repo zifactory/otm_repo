@@ -1,4 +1,5 @@
-package app.config;/*
+package app.config;
+/*
  * Copyright (C) 2013 surya || nanang.ask@gmail.com
  *
  * This program is free software; you can redistribute it and/or
@@ -18,6 +19,9 @@ package app.config;/*
 
 import app.controllers.BookContentsController;
 import app.controllers.BooksController;
+import app.controllers.HomeController;
+import app.controllers.access.LoginController;
+import app.cores.LoginFilter;
 import app.cores.MainFilterC;
 import org.javalite.activeweb.AbstractControllerConfig;
 import org.javalite.activeweb.AppContext;
@@ -32,8 +36,9 @@ import org.javalite.activeweb.controller_filters.TimingFilter;
 public class AppControllerConfig extends AbstractControllerConfig {
 
     public void init(AppContext context) {
-        addGlobalFilters(new TimingFilter(), new MainFilterC());
-        add(new DBConnectionFilter()).to(BooksController.class);
+        addGlobalFilters(new TimingFilter(), new LoginFilter(), new MainFilterC());
+        add(new DBConnectionFilter()).to(BooksController.class, LoginController.class);
+        add(new DBConnectionFilter()).to(HomeController.class);
         add(new DBConnectionFilter()).to(BookContentsController.class);
     }
 }

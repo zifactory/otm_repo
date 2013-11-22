@@ -22,6 +22,8 @@
  */
 package app.config;
 
+import app.controllers.access.LoginController;
+import app.controllers.accounts.ProfilesController;
 import org.javalite.activeweb.AbstractRouteConfig;
 import org.javalite.activeweb.AppContext;
 
@@ -31,5 +33,8 @@ public class RouteConfig extends AbstractRouteConfig {
 //        route("/{action}/buku/{id}").to(BooksController.class);
 //        route("/{action}/{controller}/{id}").get();
 //        route("/{action}/listbuku").to(BookContentsController.class).get();
+        route("/0/{ID}").to(ProfilesController.class).action("index").get();
+        route("/x").to(LoginController.class).action("logout").post();
+        route("/3").to(LoginController.class);
     }
 }

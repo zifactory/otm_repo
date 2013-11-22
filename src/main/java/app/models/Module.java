@@ -25,12 +25,14 @@ package app.models;
 import app.cores.IModel;
 import org.javalite.activejdbc.Model;
 import org.javalite.activejdbc.annotations.Table;
+import zi.helper.ZHelperModel;
 
 @Table("modul")
 public class Module extends Model implements IModel {
 
     @Override
     public boolean insert() {
+        setId(ZHelperModel.getGenerateID());
         return super.insert();
     }
 }

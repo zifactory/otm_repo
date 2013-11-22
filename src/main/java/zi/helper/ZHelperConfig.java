@@ -22,15 +22,19 @@
  */
 package zi.helper;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.io.FileInputStream;
 import java.util.Properties;
 
 public class ZHelperConfig {
+    private final static Logger logger = LoggerFactory.getLogger(ZHelperConfig.class);
     private static ZHelperConfig singleton;
     private static Properties props = new Properties();
 
     public ZHelperConfig() {
-        System.err.println(System.getProperty("user.dir"));
+        logger.info(System.getProperty("user.dir"));
     }
 
     public static synchronized ZHelperConfig getInstance() {
@@ -40,7 +44,7 @@ public class ZHelperConfig {
             }
             singleton.setProperty();
         } catch (Exception ex) {
-            System.out.println(ex.getMessage());
+            logger.info(ex.getMessage());
         }
         return singleton;
     }
@@ -78,7 +82,7 @@ public class ZHelperConfig {
             System.err.println(System.getProperty("user.dir") + "/conf/sys.conf");
             ZHelperConfig.props.load(f);
         } catch (Exception ex) {
-            System.err.println(ex.getMessage());
+            logger.error(ex.getMessage());
         }
     }
 

@@ -67,15 +67,15 @@
                         <phase>validate</phase>
                     </execution>
                     <!--<execution>-->
-                        <!--<id>test_migrations</id>-->
-                        <!--<goals>-->
-                            <!--<goal>migrate</goal>-->
-                        <!--</goals>-->
-                        <!--<phase>validate</phase>-->
-                        <!--<configuration>-->
-                            <!--<url>${jdbc.test.url}</url>-->
-                            <!--&lt;!&ndash;override location of test DB&ndash;&gt;-->
-                        <!--</configuration>-->
+                    <!--<id>test_migrations</id>-->
+                    <!--<goals>-->
+                    <!--<goal>migrate</goal>-->
+                    <!--</goals>-->
+                    <!--<phase>validate</phase>-->
+                    <!--<configuration>-->
+                    <!--<url>${jdbc.test.url}</url>-->
+                    <!--&lt;!&ndash;override location of test DB&ndash;&gt;-->
+                    <!--</configuration>-->
                     <!--</execution>-->
                 </executions>
             </plugin>
@@ -107,6 +107,7 @@
             <plugin>
                 <groupId>org.javalite</groupId>
                 <artifactId>activejdbc-instrumentation</artifactId>
+                <version>1.4.8</version>
                 <executions>
                     <execution>
                         <phase>process-classes</phase>
@@ -120,10 +121,11 @@
     </build>
     <dependencies>
         <dependency>
-            <groupId>org.javalite</groupId>
-            <artifactId>activeweb</artifactId>
-            <version>1.9</version>
+        <groupId>org.javalite</groupId>
+        <artifactId>activeweb</artifactId>
+        <version>1.10</version>
         </dependency>
+
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -140,6 +142,13 @@
             <artifactId>slf4j-simple</artifactId>
             <version>1.6.4</version>
         </dependency>
+        <!-- apache Shiro auth-->
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-core</artifactId>
+            <version>1.2.2</version>
+        </dependency>
+        <!--end apache shiro-->
         <dependency>
             <groupId>com.sun</groupId>
             <artifactId>tools</artifactId>
