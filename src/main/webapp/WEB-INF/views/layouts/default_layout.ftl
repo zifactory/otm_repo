@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <!-- <meta content="width=device-width, initial-scale=1.0" name="viewport" /> -->
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <meta name="title" content=""/>
     <meta name="author" content=""/>
     <meta name="owner" content=""/>
@@ -19,14 +19,21 @@
     <meta name="content-Language" content="english"/>
 
     <title>OTransMedia | <@yield to="title"/></title>
-    <link href="${context_path}/asset/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="${context_path}/asset/css/reset.css" rel="stylesheet" type="text/css">
-    <link href="${context_path}/asset/css/style.css" rel="stylesheet" type="text/css">
+    <link href="${context_path}/asset/plugins/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="${context_path}/asset/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <!--[if IE 7]>
     <link href="${context_path}/asset/plugins/font-awesome/css/font-awesome-ie7.min.css" rel="stylesheet"
           type="text/css">
     <![endif]-->
+<@yield to="css"/>
+    <link href="${context_path}/asset/css/nprogress.css" rel="stylesheet" type="text/css">
+    <link href="${context_path}/asset/plugins/chosen/chosen.min.css" rel="stylesheet" type="text/css">
+    <link href="${context_path}/asset/css/pretty-page.css" rel="stylesheet" type="text/css">
+    <link href="${context_path}/asset/css/reset.css" rel="stylesheet" type="text/css">
+    <link href="${context_path}/asset/css/style.css" rel="stylesheet" type="text/css">
+<#--<link href="${context_path}/asset/css/style.min.css" rel="stylesheet" type="text/css">-->
+
+    <link rel="shortcut icon" href="${context_path}/asset/img/ico/favicon.ico"/>
 </head>
 <body>
 <#include "header.ftl">

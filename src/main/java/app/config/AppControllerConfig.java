@@ -17,10 +17,11 @@ package app.config;
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
 
-import app.controllers.BookContentsController;
 import app.controllers.BooksController;
 import app.controllers.HomeController;
 import app.controllers.access.LoginController;
+import app.controllers.accounts.ProfilesController;
+import app.controllers.setting.CategoryController;
 import app.cores.LoginFilter;
 import app.cores.MainFilterC;
 import org.javalite.activeweb.AbstractControllerConfig;
@@ -36,9 +37,9 @@ import org.javalite.activeweb.controller_filters.TimingFilter;
 public class AppControllerConfig extends AbstractControllerConfig {
 
     public void init(AppContext context) {
-        addGlobalFilters(new TimingFilter(), new LoginFilter(), new MainFilterC());
-        add(new DBConnectionFilter()).to(BooksController.class, LoginController.class);
-        add(new DBConnectionFilter()).to(HomeController.class);
-        add(new DBConnectionFilter()).to(BookContentsController.class);
+        addGlobalFilters(new TimingFilter(), new MainFilterC());
+        add(new DBConnectionFilter()).to(HomeController.class, BooksController.class,
+                LoginController.class, ProfilesController.class, CategoryController.class);
+        add(new LoginFilter()).to(CategoryController.class, ProfilesController.class);
     }
 }

@@ -22,16 +22,16 @@
  */
 package app.test;
 
-import app.models.Book;
-import app.models.Group;
-import app.models.Module;
-import app.models.User;
+import app.models.*;
 import app.modules.user.MModule;
+import org.javalite.activejdbc.LazyList;
 import org.junit.Test;
+import zi.helper.ZHelper;
 import zi.helper.test.ActiveJDBCTest;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Vector;
 
 public class UnmanagedID extends ActiveJDBCTest {
     @Test
@@ -79,7 +79,7 @@ public class UnmanagedID extends ActiveJDBCTest {
     public void shouldInsertUserTest() {
 
         Group grp = new Group();
-        grp.set("nama","admin");
+        grp.set("nama", "admin");
         grp.insert();
 
         User user = new User();
@@ -97,6 +97,40 @@ public class UnmanagedID extends ActiveJDBCTest {
 //        the(user.count()).shouldBeEqual(10);
 //        the(user.findById(user.getId()).get("isbn")).shouldBeEqual("88868677");
 //        the(user.findById(book2.getId()).get("isbn")).shouldBeEqual("888678900");
+    }
+
+    @Test
+    public void wouldInsertGrpID() {
+        Group grp = new Group();
+        grp.set("nama", "member");
+        grp.insert();
+
+        Group grp1 = new Group();
+        grp1.set("nama", "publisher");
+        grp1.insert();
+    }
+
+    @Test
+    public void updateUnmanagedID() {
+        Category cat = Category.findById(Long.parseLong("1384487945844"));
+        cat.set("keterangan", "Manajemen Sekolah 1234");
+        cat.insert();
+
+        a(cat.get("keterangan")).shouldEqual("Manajemen Sekolah 1234");
+    }
+
+    @Test
+    public void whereMultiKey() {
+        Vector<Object> obj = new Vector<Object>();
+        obj.addElement("%66%");
+        obj.addElement("%66%");
+        obj.addElement("%66%");
+        LazyList<Category> cats = Category.where("id like ? or keterangan like ? or root like ?", obj.toArray());
+        ZHelper.logInfo(UnmanagedID.class, String.valueOf(cats.size()));
+        for (Category cat : cats) {
+            ZHelper.logInfo(UnmanagedID.class, " record" + cat.getId() + " | " + cat.get("keterangan"));
+        }
+
     }
 
 }

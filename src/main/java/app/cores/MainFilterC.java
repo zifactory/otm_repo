@@ -47,13 +47,12 @@ public class MainFilterC extends HttpSupportFilter {
     @Override
     public void onException(Exception e) {
         if (e.getCause() instanceof ClassNotFoundException) {
-           // logError(e.getMessage(), e);
+            logError(e.getMessage(), e);
             logError("<<<<ClassNotFoundException>>>>");
         }
 
         if (Configuration.getEnv().equalsIgnoreCase("development")) {
-            render("/system/errordebug", Collections.map("Stacks", e)).noLayout();
-            return;
+            render("/system/error", Collections.map("e", e, "message", e.getMessage())).noLayout();
         }
     }
 }

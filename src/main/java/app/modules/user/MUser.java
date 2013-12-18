@@ -45,7 +45,7 @@ public class MUser {
      * @param map map with attributes to overwrite this models'. Keys are names of attributes of this model, values
      * @return void
      */
-    public static User create(Map<String, Object> map) {
+    public static User create(Map map) {
         User usr = new User();
         try {
             usr.fromMap(map);
@@ -80,7 +80,7 @@ public class MUser {
 
     public static User ReadByName(Object NAME) throws DBException {
         User usr = new User();
-        LazyList<User> user = User.find("name = ?", NAME);
+        LazyList<User> user = User.find("email = ?", NAME);
         for (User mList : user) {
             usr = mList;
         }
@@ -94,7 +94,7 @@ public class MUser {
      * @param ID  Long Generate ID ZHelperModel
      * @return true if record has ID
      */
-    public static boolean update(Map<String, String> map, Long ID) throws DBException {
+    public static boolean update(Map map, Long ID) throws DBException {
         boolean result = false;
         try {
             User usr = User.findById(ID);

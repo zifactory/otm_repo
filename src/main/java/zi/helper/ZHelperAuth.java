@@ -27,6 +27,7 @@ import app.modules.user.MUser;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.AuthenticationToken;
 import org.apache.shiro.authc.UsernamePasswordToken;
+import org.javalite.activejdbc.DBException;
 
 import java.io.Serializable;
 import java.util.Arrays;
@@ -77,35 +78,44 @@ public class ZHelperAuth implements Serializable {
             ZHelper.logInfo(ZHelperAuth.class, "Username is null.");
             return;
         }
+        try {
+            // read password hash and salt from db
+            User UserDB = MUser.ReadByName(username);
 
-        // read password hash and salt from db
-        User UserDB = MUser.ReadByName(username);
+            if (UserDB.get("password") == null) {
+                ZHelper.logInfo(ZHelperAuth.class, "No account found for user [" + username + "]");
+                setisAuth(false);
+                return;
+            } else {
+                setUser(UserDB);
+                //tokenLogin {emailpassword + ip}
+                setTokenLogin(ZHelper.simpleSaltedHash(UserDB.get("email").toString(), UserDB.get("password").toString(), userPassToken.getHost()).toCharArray());
+                ZHelper.logInfo(ZHelperAuth.class, "account found for user [" + username + "] in <" + userPassToken.getHost() + "> :: => [" + String.valueOf(getToken()) + "]");
+            }
 
-        if (UserDB.get("password") == null) {
-            ZHelper.logInfo(ZHelperAuth.class, "No account found for user [" + username + "]");
-            return;
-        } else {
-            setUser(UserDB);
-            //tokenLogin {userpassword + ip}
-            setTokenLogin(ZHelper.simpleSaltedHash(UserDB.get("email").toString(), UserDB.get("password").toString(), userPassToken.getHost()).toCharArray());
-            ZHelper.logInfo(ZHelperAuth.class, "account found for user [" + username + "] in <" + userPassToken.getHost() + "> :: => [" + String.valueOf(getToken()) + "]");
-        }
+            UsernamePasswordToken info = new UsernamePasswordToken(UserDB.get("name").toString(),
+                    UserDB.get("password").toString(), userPassToken.isRememberMe(), userPassToken.getHost());
 
-        UsernamePasswordToken info = new UsernamePasswordToken(UserDB.get("name").toString(),
-                UserDB.get("password").toString(), userPassToken.isRememberMe(), userPassToken.getHost());
-        // return salted credentials
+            // return salted credentials
+            ZHelper.logInfo(ZHelperAuth.class, String.valueOf(userPassToken.getPassword()) + " :::=> token" + UserDB.get("name"));
+            ZHelper.logInfo(ZHelperAuth.class, String.valueOf(info.getPassword()) + " :::=> token" + info.getUsername());
+
 //        SimpleAuthenticationInfo info = new SimpleAuthenticationInfo(UserDB.get("name"),
 //                ZHelper.simpleSaltedHash(UserDB.get("name").toString(),
 //                        userPassToken.getPassword().toString()), "jdbcRealm");
+//            PasswordService svc = new DefaultPasswordService();
 
-        // for compare secure auth password user
-        if (Arrays.equals(info.getPassword(), userPassToken.getPassword())) {
-            ZHelper.logInfo(ZHelperAuth.class, String.valueOf(userPassToken.getCredentials()) + " :::=> token" + UserDB.get("name"));
-            setisAuth(true);
-            ZHelper.logInfo(ZHelperAuth.class, info.getCredentials().toString() + " ::: => salt");
-        } else setisAuth(false);
-
-        setAuthToken(info);
+            // for compare secure auth password user
+            if (Arrays.equals(info.getPassword(), userPassToken.getPassword())) {
+                // if (svc.passwordsMatch(userPassToken.getPassword(), String.valueOf(info.getPassword()))) {
+                ZHelper.logInfo(ZHelperAuth.class, String.valueOf(userPassToken.getCredentials()) + " :::=> token" + UserDB.get("name"));
+                setisAuth(true);
+                ZHelper.logInfo(ZHelperAuth.class, info.getCredentials().toString() + " ::: => salt");
+            } else setisAuth(false);
+            setAuthToken(info);
+        } catch (DBException db) {
+            ZHelper.logError(ZHelperAuth.class, db.getMessage());
+        }
     }
 
     public AuthenticationToken getAuthToken() {

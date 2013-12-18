@@ -24,6 +24,6 @@ package app.cores;
 
 public interface IModel {
 
-    public boolean insert();
+    boolean insert();
 
 }

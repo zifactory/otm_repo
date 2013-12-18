@@ -59,12 +59,6 @@ public class ZHelper {
     }
 
     public static String simpleSaltedHash(String username, String password) {
-
-//        Sha256Hash sha256Hash = new Sha256Hash(password, (new SimpleByteSource("OTransmedia.2.0" + username)).getBytes());
-//        String result = sha256Hash.toHex();
-//
-//        System.out.println(username + " simple salted hash: " + result);
-
         return ZHelper.simpleSaltedHash(username, password, "OTransmedia.2.0");
     }
 
@@ -72,7 +66,7 @@ public class ZHelper {
         Sha256Hash sha256Hash = new Sha256Hash(key2, (new SimpleByteSource(salt + key1)).getBytes());
         String result = sha256Hash.toHex();
 
-        System.out.println(key1 + " simple salted hash: " + result);
+        ZHelper.logInfo(ZHelper.class, key1 + " simple salted hash: " + result);
         return result;
     }
 
@@ -83,4 +77,17 @@ public class ZHelper {
     public static void logError(Class cls, String msg) {
         LoggerFactory.getLogger(cls).error(msg);
     }
+
+    public static Object valsWasNull(Object param) {
+        return !param.equals(null) ? param : null;
+    }
+
+    public static Object valsWasInt(Object param) {
+        return !param.equals(null) ? param : 0;
+    }
+
+    public static boolean isWasNull(Object param) {
+        return param.equals("") || String.valueOf(param).isEmpty() || param.equals(null);
+    }
+
 }

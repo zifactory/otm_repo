@@ -45,7 +45,7 @@ public class MModule {
      * @param map map with attributes to overwrite this models'. Keys are names of attributes of this model, values
      * @return void
      */
-    public static Module create(Map<String, Object> map) {
+    public static Module create(Map map) {
         Module modul = new Module();
         try {
             modul.fromMap(map);
@@ -85,7 +85,7 @@ public class MModule {
      * @param ID  Long Generate ID ZHelperModel
      * @return true if record has ID
      */
-    public static boolean update(Map<String, String> map, Long ID) throws DBException {
+    public static boolean update(Map map, Long ID) throws DBException {
         boolean result = false;
         try {
             Module module = Module.findById(ID);

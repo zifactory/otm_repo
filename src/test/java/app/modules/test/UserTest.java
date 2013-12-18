@@ -22,26 +22,47 @@
  */
 package app.modules.test;
 
+import app.models.Member;
 import app.models.User;
-import app.modules.user.MUser;
 import org.junit.Test;
 import zi.helper.test.ActiveJDBCTest;
-
-import java.util.HashMap;
-import java.util.Map;
 
 public class UserTest extends ActiveJDBCTest {
     @Test
     public void insertGenIDGroup() {
-        Map<String, Object> usr = new HashMap<String, Object>();
-        usr.put("name", "surya");
-        usr.put("password", "Suryakencana1234");
-        usr.put("email", "nanang.ask@gmail.com");
-        // usr.put("grp_id", "8856654525"); //foreign key grp_id harus ada di id tabel group
-        User musr = MUser.create(usr);
+//        Map<String, Object> usr = new HashMap<String, Object>();
+//        usr.put("name", "surya");
+//        usr.put("password", "Suryakencana1234");
+//        usr.put("email", "nanang.ask@gmail.com");
+//        // usr.put("grp_id", "8856654525"); //foreign key grp_id harus ada di id tabel group
+//        User musr = MUser.create(usr);
 
         //a(MUser.delete("name = ?", "surya")).shouldBeTrue();
-        the(MUser.ReadAll().size()).shouldBeEqual(3);
+        //the(MUser.ReadAll().size()).shouldBeEqual(6);
+    }
+
+    @Test
+    public void readByName() {
+      /*  User UserDB = MUser.ReadByName("nanang.ask@gmail.com");
+        a(UserDB.get("password")).shouldNotBeNull();*/
+    }
+
+    @Test
+    public void OneToManyTest() {
+        Member mbr = new Member();
+        mbr.set("firstname", "nanang");
+        mbr.set("lastname", "suryadi");
+//        mbr.insert();
+        User user = new User();
+        user.set("name", "nanang suryadi");
+        user.set("password", "nanang suryadi");
+        user.set("email", "nanang@suryadi.com");
+        user.insert();
+        user.addNoID(mbr);
+        Member mmbr = Member.findById(Long.parseLong("1385449670349"));
+
+        a(mmbr.parent(User.class)).shouldNotBeNull();
+
     }
 
 }

@@ -24,9 +24,11 @@ package app.models;
 
 import app.cores.IModel;
 import org.javalite.activejdbc.Model;
+import org.javalite.activejdbc.annotations.BelongsTo;
 import org.javalite.activejdbc.annotations.Table;
 import zi.helper.ZHelperModel;
 
+@BelongsTo(parent = User.class, foreignKeyName = "user_id")
 @Table("member")
 public class Member extends Model implements IModel {
 

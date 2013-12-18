@@ -16,6 +16,10 @@
         <jdbc.user>root</jdbc.user>
         <jdbc.password>root</jdbc.password>
         <!--<jdbc.test.url>jdbc:mysql://localhost/simple_test</jdbc.test.url>-->
+        <coffee-maven-plugin.version>1.4.1</coffee-maven-plugin.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.build.resourceEncoding>ISO-8859-1</project.build.resourceEncoding>
+        <jackson-2-version>2.2.2</jackson-2-version>
     </properties>
 
     <build>
@@ -39,6 +43,7 @@
                 <configuration>
                     <source>1.5</source>
                     <target>1.5</target>
+                    <encoding>${project.build.sourceEncoding}</encoding>
                 </configuration>
             </plugin>
             <plugin>
@@ -117,13 +122,111 @@
                     </execution>
                 </executions>
             </plugin>
+
+            <!-- Minify JS CSS-->
+            <!--<plugin>-->
+            <!--<groupId>org.apache.maven.plugins</groupId>-->
+            <!--<artifactId>maven-war-plugin</artifactId>-->
+            <!--<version>2.4</version>-->
+            <!--<configuration>-->
+            <!--<warSourceExcludes>-->
+            <!--**/reset.css,**/fonts.css,**/base.css,**/toc.css,**/samaxesjs.core.js,**/samaxesjs.toc.js-->
+            <!--</warSourceExcludes>-->
+            <!--<archive>-->
+            <!--<manifest>-->
+            <!--<addDefaultImplementationEntries>true</addDefaultImplementationEntries>-->
+            <!--</manifest>-->
+            <!--<addMavenDescriptor>false</addMavenDescriptor>-->
+            <!--</archive>-->
+            <!--</configuration>-->
+            <!--</plugin>-->
+            <plugin>
+                <groupId>com.samaxes.maven</groupId>
+                <artifactId>minify-maven-plugin</artifactId>
+                <version>1.7.2</version>
+                <executions>
+                    <execution>
+                        <id>default-minify</id>
+                        <configuration>
+                            <cssSourceDir>asset/css</cssSourceDir>
+                            <cssTargetDir>asset/css</cssTargetDir>
+                            <cssSourceIncludes>
+                                <cssSourceInclude>**</cssSourceInclude>
+                            </cssSourceIncludes>
+                            <cssSourceExcludes>
+                                <cssSourceExclude>**/*.min.css</cssSourceExclude>
+                            </cssSourceExcludes>
+
+
+                            <jsSourceDir>asset/scripts/kopi</jsSourceDir>
+                            <jsTargetDir>asset/scripts/kopi</jsTargetDir>
+                            <jsSourceIncludes>
+                                <jsSourceInclude>**</jsSourceInclude>
+                            </jsSourceIncludes>
+                            <jsSourceExcludes>
+                                <jsSourceExclude>**/*.min.js</jsSourceExclude>
+                            </jsSourceExcludes>
+
+                            <jsEngine>CLOSURE</jsEngine>
+                            <!--closureCompilationLevel>ADVANCED_OPTIMIZATIONS</closureCompilationLevel-->
+                            <!--closureExterns>
+                                <closureExtern>extern/external-lib.js</closureExtern>
+                            </closureExterns-->
+                        </configuration>
+                        <goals>
+                            <goal>minify</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <!-- COFFEESCRIPT -->
+            <!--<plugin>-->
+            <!--<groupId>com.theoryinpractise</groupId>-->
+            <!--<artifactId>coffee-maven-plugin</artifactId>-->
+            <!--<version>${coffee-maven-plugin.version}</version>-->
+            <!--<executions>-->
+            <!--<execution>-->
+            <!--<goals>-->
+            <!--<goal>coffee</goal>-->
+            <!--</goals>-->
+            <!--</execution>-->
+            <!--</executions>-->
+            <!--<configuration>-->
+            <!--<coffeeDir>${basedir}/src/main/webapp/asset/coffee</coffeeDir>-->
+            <!--<coffeeOutputDirectory>${basedir}/src/main/webapp/asset/scripts/kopi</coffeeOutputDirectory>-->
+            <!--</configuration>-->
+            <!--</plugin>-->
+
         </plugins>
     </build>
     <dependencies>
         <dependency>
-        <groupId>org.javalite</groupId>
-        <artifactId>activeweb</artifactId>
-        <version>1.10</version>
+            <groupId>org.javalite</groupId>
+            <artifactId>activeweb</artifactId>
+            <version>1.9.3.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.javalite</groupId>
+            <artifactId>activejdbc</artifactId>
+            <version>1.4.9.1</version>
+        </dependency>
+        <!-- the core, which includes Streaming API, shared low-level abstractions (but NOT data-binding) -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>2.2.3</version>
+        </dependency>
+        <!-- databinding; ObjectMapper, JsonNode and related classes are here -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson-2-version}</version>
+        </dependency>
+        <!-- smile (binary JSON). Other artifacts in this group do other formats. -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.dataformat</groupId>
+            <artifactId>jackson-dataformat-smile</artifactId>
+            <version>${jackson-2-version}</version>
         </dependency>
 
         <dependency>

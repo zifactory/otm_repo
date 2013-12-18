@@ -25,9 +25,8 @@ import org.javalite.activeweb.Configuration;
 public class AppBootstrap extends Bootstrap {
     public void init(AppContext context) {
 //        setInjector(Guice.createInjector(new GreeterModule()));
-        Configuration.setUseDefaultLayoutForErrors(true);
+        Configuration.setUseDefaultLayoutForErrors(false);
         System.err.println(System.getProperty("user.dir") + "-----------");
         System.err.println(Configuration.getEnv() + "---------");
-        Configuration.setUseDefaultLayoutForErrors(false);
     }
 }

@@ -22,12 +22,39 @@
  */
 package app.controllers.accounts;
 
+import app.models.User;
+import app.modules.user.MUser;
 import org.javalite.activeweb.AppController;
+import org.javalite.activeweb.annotations.GET;
+import zi.helper.ZHelperAuth;
 
 public class ProfilesController extends AppController {
+
+    @GET
     public void index() {
-        logInfo(param("ID"));
-        view("id", param("ID"));
-        render("/home/index").noLayout();
+        ZHelperAuth auth = (ZHelperAuth) session().get("authuser");
+        String ID = param("ID");
+        User user = MUser.ReadByID(param("ID"));
+
+        if (auth != null) {
+            if (!auth.getUser().getId().equals(ID)) {
+                user = MUser.ReadByID(param("ID"));
+            } else user = auth.getUser();
+        }
+
+        if (user != null) {
+            logInfo(user.getString("email"));
+            logInfo(param("ID"));
+            view("getUser", user);
+        } else {
+            view("msgbox", "User Tidak ditemukan : " + param("ID") +
+                    "<br /> Untuk Bergabung dengan OTransmedia silakan <a  href=\"" + context() +
+                    "/access/login\" ><strong>disini</strong></a>");
+            render("/home/index");
+        }
+    }
+
+    public void info() {
+
     }
 }

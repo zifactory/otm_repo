@@ -9,7 +9,7 @@
 *
 ***/
 
-html, body, div, h1, h2, h3, h4, h5, h6, p,
+html, div, h1, h2, h3, h4, h5, h6, p,
 img, dl, dt, dd, ol, ul, li, table,
 caption, tbody, tfoot, thead, tr, th,
 td, form, fieldset, embed, object, applet {
@@ -813,7 +813,7 @@ input[type="checkbox"][readonly] {
 input[type="radio"].m-wrap,
 input[type="checkbox"].m-wrap {
     margin: 4px 0 0;
-    margin-top: 1px     \9;
+    margin-top: 1px                                                   \9;
     *margin-top: 0;
     line-height: normal;
     cursor: pointer;
@@ -995,7 +995,7 @@ for Card list content
 
 .cluster {
     display: inline-block;
-    margin: 5px 0 15px 0;
+    margin: 5px 0 25px 0;
     position: relative;
     text-align: left;
     width: 100%;
@@ -1030,7 +1030,7 @@ for Card list content
     margin-left: 248px;
     /*max-height: 680px;*/
     min-width: 340px;
-    overflow: hidden;
+    /*overflow: hidden;*/
     position: relative;
 }
 
@@ -1516,6 +1516,106 @@ Login page
     margin: 0px !important;
 }
 
+.profile-content {
+    width: 74%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 35px;
+}
+
+/*profiles*/
+.profile-card {
+    font-size: 14px;
+}
+
+.profile-card,
+.profile-card h1,
+.profile-card h2,
+.profile-card h3,
+.profile-card a {
+    color: #fff !important;
+}
+
+.profile-card .cover {
+    -moz-border-radius: 2px 2px 0 0;
+    -webkit-border-radius: 2px 2px 0 0;
+    border-radius: 2px 2px 0 0;
+    background-color: #f5f5f5;
+    overflow: hidden;
+    position: relative;
+}
+
+.profile-wrapper {
+    width: 56%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.profile-background {
+    width: 100%;
+    position: relative;
+    height: 350px;
+    background-size: 100%;
+    background-position: center;
+    padding-top: 25px;
+    -moz-box-shadow: 0 0 4px #8d8d8d;
+    -ms-box-shadow: 0 0 4px #8d8d8d;
+    -webkit-box-shadow: 0 0 4px #8d8d8d;
+    box-shadow: 0 0 4px #8d8d8d;
+    margin-bottom: 10px;
+}
+
+.profile-display {
+    width: 180px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 21px;
+    margin-top: 25px;
+}
+
+.profile-display .cover {
+    height: 180px;
+    width: 180px;
+}
+
+.profile-card .cover-image-container {
+    height: 110%;
+    left: -5%;
+    position: relative;
+    top: -5%;
+    width: 110%;
+}
+
+.profile-card .cover-outer-align {
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+
+.profile-card .cover-inner-align {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.profile-card .cover-image {
+    max-width: 73%;
+}
+
+.profile-detail {
+    text-align: center;
+    line-height: 18px;
+}
+
+.profile-detail .fullname {
+    font-size: 24px;
+    white-space: nowrap;
+}
+
+.profile-detail .profile-status {
+    max-height: 150px;
+}
+
 /* input with left aligned icons */
 .input-icon.left i {
     color: #ccc;
@@ -1532,6 +1632,8 @@ Login page
 .input-icon.left input {
     padding-left: 33px !important;
 }
+
+/* profile activity*/
 
 /* end Login style*/
 
@@ -1552,4 +1654,42 @@ Login page
 
 .link_blue:hover {
     color: #ffffff !important;
+}
+
+/*DataTable Bootstrap 3.0*/
+.dataTables_paginate ul {
+    list-style-type: none !important;
+    display: inline-block;
+    margin-bottom: 0;
+    margin-left: 0;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.dataTables_paginate ul>li {
+    display: inline;
+}
+
+.dataTables_paginate ul>li:first-child>a, .dataTables_paginate ul>li:first-child>span {
+    border-left-width: 1px;
+    -webkit-border-bottom-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    -webkit-border-top-left-radius: 4px;
+    border-top-left-radius: 4px;
+    -moz-border-radius-bottomleft: 4px;
+    -moz-border-radius-topleft: 4px;
+}
+
+.dataTables_paginate ul>li>a, .dataTables_paginate ul>li>span {
+    float: left;
+    padding: 4px 12px;
+    line-height: 20px;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-left-width: 0;
 }

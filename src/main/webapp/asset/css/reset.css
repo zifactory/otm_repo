@@ -9,18 +9,9 @@ Import fonts
 /* load open sans font from local */
 @import url(../fonts/font.css);
 
-/* General body settings */
-body { 
-  color: #000; 
-  font-size:13px; 
-  direction: ltr;
-  margin: 0 !important;
-  padding: 0 !important;
-  font-family: 'Open Sans' !important;
-}
 
 /*********************
- GENERAL UI COLORS 
+ GENERAL UI COLORS
 *********************/
 
 /***
@@ -38,11 +29,11 @@ Colors
 .color-light-green { color: #78df1d;}
 
 /*********************
- GENERAL RESET & SETUP 
+ GENERAL RESET & SETUP
 *********************/
 
 /***
-General typography 
+General typography
 ***/
 h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
@@ -66,9 +57,9 @@ h2 a:hover {
   transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
-  -webkit-transition: all 0.5s ease;        
+  -webkit-transition: all 0.5s ease;
  }
- 
+
 h3 {
   color: #222;
 }
@@ -78,8 +69,8 @@ Apply fix for font awesome icons.
 ***/
 [class^="icon-"],
 [class*=" icon-"],
-[class^="icon-"]:hover, 
-[class*=" icon-"]:hover { 
+[class^="icon-"]:hover,
+[class*=" icon-"]:hover {
   background: none !important;
 }
 

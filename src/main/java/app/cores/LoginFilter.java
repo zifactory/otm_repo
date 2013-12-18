@@ -35,12 +35,13 @@ public class LoginFilter extends HttpSupportFilter {
         ZHelperAuth auth = (ZHelperAuth) session().get("authuser");
 
         if (auth == null) {
-            ZHelper.logInfo(LoginFilter.class, "");
+            redirect(context() + "/access/login");
+            ZHelper.logInfo(LoginFilter.class, "Auth false mengarah ke signup form");
         } else {
             if (auth.isAuth()) {
                 view("authuser", auth);
+                ZHelper.logInfo(LoginFilter.class, " ::>>> ini buat :: " + auth.getUser().get("password"));
             }
-            ZHelper.logInfo(LoginFilter.class, " ::>>> ini buat :: " + auth.getUser().get("password"));
         }
     }
 

@@ -25,15 +25,11 @@ package app.modules.user;
 import app.models.Group;
 import org.javalite.activejdbc.DBException;
 import org.javalite.activejdbc.LazyList;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import zi.helper.ZHelper;
 
 import java.util.Map;
 
 public class MGroup {
-
-    private final static Logger logger = LoggerFactory.getLogger(MGroup.class);
 
     public MGroup() {
 
@@ -52,9 +48,9 @@ public class MGroup {
             if (!grp.insert()) {
                 ZHelper.setPesan("Ada Kesalahan diData Inputan!");
             } else ZHelper.setPesan("Data Berhasil.");
-            logger.info(ZHelper.getPesan());
+            ZHelper.logInfo(MGroup.class, ZHelper.getPesan());
         } catch (DBException e) {
-            logger.error(e.getMessage() + " Insert Ke modul DB gagal", e);
+            ZHelper.logError(MGroup.class, e.getMessage() + " Insert Ke modul DB gagal");
         }
         return grp;
     }
@@ -78,6 +74,15 @@ public class MGroup {
         return Group.findById(ID);
     }
 
+    public static Group ReadByName(Object NAME) throws DBException {
+        Group grp = new Group();
+        LazyList<Group> groups = Group.find("nama = ?", NAME);
+        for (Group mList : groups) {
+            grp = mList;
+        }
+        return grp;
+    }
+
     /**
      * Update Group Record with Map<String,String>
      *
@@ -91,9 +96,9 @@ public class MGroup {
             Group grp = Group.findById(ID);
             grp.fromMap(map);
             result = grp.saveIt();
-            logger.info("Update Data id : " + ID.toString());
+            ZHelper.logInfo(MGroup.class, "Update Data id : " + ID.toString());
         } catch (DBException e) {
-            logger.error(e.getMessage() + "Update Ke modul DB gagal", e);
+            ZHelper.logError(MGroup.class, e.getMessage() + "Update Ke modul DB gagal");
         }
         return result;
     }
@@ -117,10 +122,10 @@ public class MGroup {
                 result = mList.delete();
             }
             ZHelper.setPesan("Data berhasil Dihapus");
-            logger.info(ZHelper.getPesan());
+            ZHelper.logInfo(MGroup.class, ZHelper.getPesan());
             return result;
         } catch (DBException e) {
-            logger.error(e.getMessage(), e);
+            ZHelper.logError(MGroup.class, e.getMessage());
             return result;
         }
     }

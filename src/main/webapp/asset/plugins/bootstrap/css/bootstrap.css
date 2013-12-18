@@ -17,7 +17,6 @@ figure,
 footer,
 header,
 hgroup,
-main,
 nav,
 section,
 summary {
@@ -523,10 +522,10 @@ dd {
   .dl-horizontal dd:after {
     content: " ";
     /* 1 */
-  
+
     display: table;
     /* 2 */
-  
+
   }
   .dl-horizontal dd:after {
     clear: both;
@@ -535,10 +534,10 @@ dd {
   .dl-horizontal dd:after {
     content: " ";
     /* 1 */
-  
+
     display: table;
     /* 2 */
-  
+
   }
   .dl-horizontal dd:after {
     clear: both;
@@ -3885,6 +3884,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   margin: 20px 0;
   border-radius: 4px;
 }
+
 .pagination > li {
   display: inline;
 }
@@ -5886,14 +5886,8 @@ td.visible-print {
     display: none !important;
   }
 }
-.fade {
-  opacity: 0;
-  -webkit-transition: opacity 0.15s linear;
-  transition: opacity 0.15s linear;
-}
-.fade.in {
-  opacity: 1;
-}
+.fade {}
+.fade.in {}
 .collapse {
   display: none;
 }

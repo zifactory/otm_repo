@@ -107,26 +107,7 @@ ${(stack.getFileName())!""}
     </@content>
     <@content for="errorHuman">
     <div class="container">
-        <div class="stack-container">
-
-            <p class="exc-message">
-
-                Error message: <span>${message}</span> <br>
-                Stack trace:
-            </p>
-            <a id="show_link" href="#" onclick='show();'>See Stack Trace</a>
-
-            <div id="stack_trace" style="display:none">
-<pre>
-${stack_trace}
-</pre>
-            </div>
-        </div>
-        <script type="text/javascript">
-            function show() {
-                document.getElementById("stack_trace").removeAttribute("style");
-            }
-        </script>
+       <h1><strong>404 - Page Not Found!!!</strong></h1>
     </div>
     </@content>
 </@wrap>
