@@ -13,7 +13,7 @@
     <ignored path="otm_repo.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/pom.xml" changelist="814003aa-0116-4072-9e91-8892914118e0" time="1390448832829" ignored="false" />
-    <file path="/Dummy.txt" changelist="814003aa-0116-4072-9e91-8892914118e0" time="1391413803128" ignored="false" />
+    <file path="/Dummy.txt" changelist="814003aa-0116-4072-9e91-8892914118e0" time="1391413884956" ignored="false" />
     <file path="/dummy.txt" changelist="814003aa-0116-4072-9e91-8892914118e0" time="1391401486810" ignored="false" />
     <file path="/sys.conf" changelist="814003aa-0116-4072-9e91-8892914118e0" time="1382431884579" ignored="false" />
     <file path="/MainFilterC.java" changelist="814003aa-0116-4072-9e91-8892914118e0" time="1386832107039" ignored="false" />
@@ -1706,7 +1706,11 @@
       <created>1391413807323</created>
       <updated>1391413807323</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="- [major] database tabel tags_content dihapus&#10;- [major] database tabel tags berubah sesuai activejdbc sistem polymorphic&#10;- [minor] untuk data autocomplete menggunakan typeaheadjs ajax&#10;- [minor] untuk data multiple input menggunakan select2 ajax&#10;- [major] Relationship (ForeignKey) tb_app , tb_video dan tb_buku untuk tabel content_creator dihapus dikarena ambigous FK&#10;- [minor] CURD content Video dan Buku lebih !hati2 saat update dan delete untuk FK tabel&#10;- [minor] fungsi javascropt selectFunk() digunakan untuk ajax pada select2 multiple input (tags label style)&#10;- [minor] saat delete content ditambahkan fungsi clear folder dan file content">
+      <created>1391413896153</created>
+      <updated>1391413896153</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
