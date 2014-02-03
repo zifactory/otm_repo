@@ -24,15 +24,27 @@ package app.models;
 
 import app.cores.IModel;
 import org.javalite.activejdbc.Model;
+import org.javalite.activejdbc.annotations.BelongsTo;
+import org.javalite.activejdbc.annotations.BelongsToParents;
+import org.javalite.activejdbc.annotations.Many2Many;
 import org.javalite.activejdbc.annotations.Table;
 import zi.helper.ZHelperModel;
 
+@BelongsToParents({
+        @BelongsTo(parent = Publisher.class, foreignKeyName = "penerbit_id"),
+        @BelongsTo(parent = Category.class, foreignKeyName = "kategori_id")
+})
 @Table("tb_video")
+@Many2Many(other = Author.class, join = "content_creator", sourceFKName = "content_id", targetFKName = "creator_id")
 public class Video extends Model implements IModel {
 
     @Override
     public boolean insert() {
-        setId(ZHelperModel.getGenerateID());
-        return super.insert();
+        if (getId() == null) {
+            setId(ZHelperModel.getGenerateID());
+            return super.insert();
+        } else {
+            return super.save();
+        }
     }
 }

@@ -50,7 +50,11 @@ public class ProfilesController extends AppController {
             view("msgbox", "User Tidak ditemukan : " + param("ID") +
                     "<br /> Untuk Bergabung dengan OTransmedia silakan <a  href=\"" + context() +
                     "/access/login\" ><strong>disini</strong></a>");
+            String obj = "User Tidak ditemukan : " + param("ID") +
+                    "<br /> Untuk Bergabung dengan OTransmedia silakan <a  href=\"" + context() +
+                    "/access/login\" ><strong>disini</strong></a>";
             render("/home/index");
+            //redirect(HomeController.class);
         }
     }
 

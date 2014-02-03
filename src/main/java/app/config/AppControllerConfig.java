@@ -17,11 +17,13 @@ package app.config;
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
 
-import app.controllers.BooksController;
 import app.controllers.HomeController;
 import app.controllers.access.LoginController;
 import app.controllers.accounts.ProfilesController;
-import app.controllers.setting.CategoryController;
+import app.controllers.contents.BooksController;
+import app.controllers.contents.InventoryController;
+import app.controllers.contents.VideosController;
+import app.controllers.setting.*;
 import app.cores.LoginFilter;
 import app.cores.MainFilterC;
 import org.javalite.activeweb.AbstractControllerConfig;
@@ -30,16 +32,16 @@ import org.javalite.activeweb.controller_filters.DBConnectionFilter;
 import org.javalite.activeweb.controller_filters.TimingFilter;
 
 /**
- * User: surya
- * Date: 10/8/13
- * Time: 10:25 AM
+ * User: surya Date: 10/8/13 Time: 10:25 AM
  */
 public class AppControllerConfig extends AbstractControllerConfig {
 
+    @Override
     public void init(AppContext context) {
         addGlobalFilters(new TimingFilter(), new MainFilterC());
-        add(new DBConnectionFilter()).to(HomeController.class, BooksController.class,
-                LoginController.class, ProfilesController.class, CategoryController.class);
-        add(new LoginFilter()).to(CategoryController.class, ProfilesController.class);
+        add(new DBConnectionFilter()).to(JsonpController.class, InventoryController.class, HomeController.class,
+                BooksController.class, VideosController.class,
+                LoginController.class, ProfilesController.class, CategoryController.class, GroupController.class, KotaController.class, KabController.class);
+        add(new LoginFilter()).to(KabController.class, KotaController.class, GroupController.class, CategoryController.class, ProfilesController.class, InventoryController.class);
     }
 }

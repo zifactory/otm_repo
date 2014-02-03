@@ -57,13 +57,13 @@ public class LoginController extends AppController {
     @POST
     public void signin() {
 
-        String pass = ZHelper.simpleSaltedHash(param("nameoremail"), param("password"));
+        String pass = ZHelperAuth.simpleSaltedHash(param("nameoremail"), param("password"));
         UsernamePasswordToken token = new UsernamePasswordToken(param("nameoremail"), pass);
         token.setHost(remoteAddress());
 
         token.setRememberMe(Boolean.parseBoolean(param("rememberme")));
         try {
-
+            logInfo(getRealPath(""));
             // currentUser.login(token);
             ZHelperAuth auth = ZHelperAuth.getInstance();
             auth.AuthHelper(token);
@@ -72,21 +72,18 @@ public class LoginController extends AppController {
                 UsernamePasswordToken loginToken = (UsernamePasswordToken) auth.getAuthToken();
                 ZHelper.logInfo(LoginController.class, loginToken.getHost() + " :: ==> getIpFrom Client ");
                 session().put("authuser", auth);
+                flash("msgbox", "Selamat datang Member " + auth.getUser().getString("name").toUpperCase());
                 redirect(context());
                 return;
             }
-        } catch (UnknownAccountException uae) {
-            ZHelper.logError(LoginController.class, uae.getMessage());
-        } catch (IncorrectCredentialsException ice) {
-            ZHelper.logError(LoginController.class, ice.getMessage());
-        } catch (LockedAccountException lae) {
-            ZHelper.logError(LoginController.class, lae.getMessage());
+        } catch (UnknownAccountException | IncorrectCredentialsException | LockedAccountException uae) {
+            logInfo(uae.getMessage());
         } catch (Exception e) {
             if (Configuration.getEnv().equalsIgnoreCase("development")) {
                 render("/system/error", Collections.map("e", e)).noLayout();
             }
         }
-        view("msgbox", "Email Tidak ditemukan : " + param("nameoremail") +
+        flash("msgbox", "Email Tidak ditemukan : " + param("nameoremail") +
                 "<br /> Untuk Bergabung dengan OTransmedia silakan <a  href=\"" + context() +
                 "/access/login\" ><strong>disini</strong></a>");
     }
@@ -104,7 +101,7 @@ public class LoginController extends AppController {
                     if (map.containsKey("signup")) {
                         if (!map.get("passwordup").equalsIgnoreCase("")) {
                             // for user table
-                            String pass = ZHelper.simpleSaltedHash(map.get("email"), map.get("passwordup"));
+                            String pass = ZHelperAuth.simpleSaltedHash(map.get("email"), map.get("passwordup"));
 
                             Group grp = MGroup.ReadByName("member");
                             String id = String.valueOf(grp.getId());
@@ -118,12 +115,17 @@ public class LoginController extends AppController {
                             // for member
                             String[] name = map.get("name").split(" ", 2);
                             logInfo("<<<signin>>>" + name[0]);
-                            Map<String, Object> HashMember = new HashMap<String, Object>();
+                            Map<String, Object> HashMember = new HashMap<>();
                             HashMember.put("firstname", name[0]);
                             if (name.length > 1) HashMember.put("lastname", name[1]);
                             HashMember.put("user_id", user.getId());
                             Member mbr = MMember.create(HashMember);
 
+                           /*
+                            * jika berhasil signup, dibuat kan folder pribadi guna utk asset account sesuai id masing2
+                            * context /p/{ID}/
+                            * */
+                            ZHelper.users_mkdir(user.getId(), getRealPath(""));
                             pesan.append("Selamat Datang : ");
                             pesan.append(user.get("name"));
                             pesan.append("<br />");
@@ -132,9 +134,10 @@ public class LoginController extends AppController {
                             pesan.append("<br />");
                             pesan.append("Password Anda : ");
                             pesan.append(map.get("passwordup"));
-                            pesan.append("<br /> ID Member");
+                            pesan.append("<br /> ID Member ::");
                             pesan.append(mbr.getId());
                             logInfo("<<<" + pesan.toString() + ">>>");
+                            flash("msgbox", pesan.toString());
                         }
                     }
                 }
@@ -144,7 +147,6 @@ public class LoginController extends AppController {
                 render("/system/error", Collections.map("e", e)).noLayout();
             }
         }
-        view("msgbox", pesan.toString());
     }
 
     @POST
@@ -155,6 +157,7 @@ public class LoginController extends AppController {
             return;
         }
         session().destroy();
+        flash("msgbox", "Terima Kasih, Datang Kembali Mate");
         redirect(context());
     }
 }

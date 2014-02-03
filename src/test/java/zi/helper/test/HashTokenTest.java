@@ -24,18 +24,18 @@ package zi.helper.test;
 
 import org.javalite.test.jspec.JSpecSupport;
 import org.junit.Test;
-import zi.helper.ZHelper;
+import zi.helper.ZHelperAuth;
 
 public class HashTokenTest extends JSpecSupport {
     @Test
     public void testToken() {
-        ZHelper.simpleHash("adminadmin");
-        ZHelper.simpleSaltedHash("surya", "adminadmin");
-        ZHelper.simpleSaltedHash("friendlyrepairman", "surya");
-        ZHelper.simpleSaltedHash("unfriendlyrepairman", "surya");
-        ZHelper.simpleSaltedHash("mathematician", "surya");
-        ZHelper.simpleSaltedHash("physicien", "surya");
-        ZHelper.simpleSaltedHash("productsales", "surya");
-        ZHelper.simpleSaltedHash("servicessales", "surya");
+        ZHelperAuth.simpleHash("adminadmin");
+        ZHelperAuth.simpleSaltedHash("surya", "adminadmin");
+        ZHelperAuth.simpleSaltedHash("friendlyrepairman", "surya");
+        ZHelperAuth.simpleSaltedHash("unfriendlyrepairman", "surya");
+        ZHelperAuth.simpleSaltedHash("mathematician", "surya");
+        ZHelperAuth.simpleSaltedHash("physicien", "surya");
+        ZHelperAuth.simpleSaltedHash("productsales", "surya");
+        ZHelperAuth.simpleSaltedHash("servicessales", "surya");
     }
 }

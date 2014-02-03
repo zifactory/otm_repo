@@ -24,15 +24,19 @@ package app.models;
 
 import app.cores.IModel;
 import org.javalite.activejdbc.Model;
+import org.javalite.activejdbc.annotations.Many2Many;
 import org.javalite.activejdbc.annotations.Table;
 import zi.helper.ZHelperModel;
 
 @Table("modul")
+@Many2Many(other = Group.class, join = "grpmodul", sourceFKName = "modul_id", targetFKName = "group_id")
 public class Module extends Model implements IModel {
 
     @Override
     public boolean insert() {
-        setId(ZHelperModel.getGenerateID());
-        return super.insert();
+        if (getId() == null) {
+            setId(ZHelperModel.getGenerateID());
+            return super.insert();
+        } else return super.save();
     }
 }

@@ -20,7 +20,7 @@
                             <div class="control-group">
                                 <div class="input-icon left">
                                     <i class="fa fa-sign-in"></i><input type="submit" class="m-wrap btn orange"
-                                                                       name="signin" value="Sign In"/>
+                                                                        name="signin" value="Sign In"/>
                                 </div>
                             </div>
                             <div class="control-group">

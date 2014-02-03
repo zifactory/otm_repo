@@ -23,7 +23,7 @@
 package app.test;
 
 import app.models.*;
-import app.modules.user.MModule;
+import app.modules.main.MModule;
 import org.javalite.activejdbc.LazyList;
 import org.junit.Test;
 import zi.helper.ZHelper;

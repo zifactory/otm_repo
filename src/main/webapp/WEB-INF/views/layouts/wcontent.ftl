@@ -1,6 +1,6 @@
 <#--<!-- Content Wrapper &ndash;&gt;-->
-<div class="details-wrapper">
-<#if msgbox?? >
+<div id="cards-contents" class="details-wrapper">
+<#if (flasher.msgbox)?? >
     <@render partial="/cores/messagebox"/>
 </#if>
 ${page_content}

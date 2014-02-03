@@ -1,0 +1,9 @@
+ver.0.8.1
+- [major] database tabel tags_content dihapus
+- [major] database tabel tags berubah sesuai activejdbc sistem polymorphic
+- [minor] untuk data autocomplete menggunakan typeaheadjs ajax
+- [minor] untuk data multiple input menggunakan select2 ajax
+- [major] Relationship (ForeignKey) tb_app , tb_video dan tb_buku untuk tabel content_creator dihapus dikarena ambigous FK
+- [minor] CURD content Video dan Buku lebih !hati2 saat update dan delete untuk FK tabel
+- [minor] fungsi javascropt selectFunk() digunakan untuk ajax pada select2 multiple input (tags label style)
+- [minor] saat delete content ditambahkan fungsi clear folder dan file content

@@ -23,6 +23,7 @@
 package app.modules.user;
 
 import app.models.Group;
+import app.models.Module;
 import org.javalite.activejdbc.DBException;
 import org.javalite.activejdbc.LazyList;
 import zi.helper.ZHelper;
@@ -33,6 +34,16 @@ public class MGroup {
 
     public MGroup() {
 
+    }
+
+    public static Group insertToModule(Map map, Object IDModule) {
+        Group grp = create(map);
+        try {
+            Module.findById(IDModule).addNoID(grp);
+        } catch (DBException db) {
+            System.out.println(db.getMessage());
+        }
+        return grp;
     }
 
     /**
@@ -81,6 +92,10 @@ public class MGroup {
             grp = mList;
         }
         return grp;
+    }
+
+    public static String getNamaByID(Object ID) throws DBException {
+        return Group.findById(ID).getString("nama");
     }
 
     /**

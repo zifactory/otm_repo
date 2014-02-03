@@ -1,3 +1,3 @@
 <@content for="title">Injection Example</@content>
 
-And the greeting is "${greeting}".
+And the greeting is "${greeting!"greeting"}".

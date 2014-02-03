@@ -22,6 +22,8 @@
  */
 package app.modules.user;
 
+import app.models.Group;
+import app.models.Module;
 import app.models.User;
 import org.javalite.activejdbc.DBException;
 import org.javalite.activejdbc.LazyList;
@@ -37,6 +39,11 @@ public class MUser {
 
     public MUser() {
 
+    }
+
+    public static LazyList<Module> getModules(Object grp_id) {
+        Group grp = Group.findById(grp_id);
+        return grp.getAll(Module.class);
     }
 
     /**

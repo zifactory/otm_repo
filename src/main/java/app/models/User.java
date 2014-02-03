@@ -25,6 +25,7 @@ package app.models;
 import app.cores.IModel;
 import org.javalite.activejdbc.Model;
 import org.javalite.activejdbc.annotations.BelongsTo;
+import org.javalite.activejdbc.annotations.Many2Many;
 import org.javalite.activejdbc.annotations.Table;
 import zi.helper.ZHelperModel;
 

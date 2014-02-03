@@ -15,71 +15,78 @@
  */
 
 /**
- * Namespace app.modules.user
- * Class MModule.java
- * @date 10/30/13
+ * Namespace app.modules.main
+ * Class MKab.java
+ * @date 12/24/13
  * @author Nanang Suryadi <nanang.ask@gmail.com>
  */
-package app.modules.user;
+package app.modules.main;
 
-import app.models.Module;
+import app.models.Kab;
 import org.javalite.activejdbc.DBException;
 import org.javalite.activejdbc.LazyList;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import zi.helper.ZHelper;
 
 import java.util.Map;
 
-public class MModule {
-
-    private final static Logger logger = LoggerFactory.getLogger(MModule.class);
-
-    public MModule() {
-
+public class MKab {
+    public MKab() {
     }
 
     /**
-     * Insert Module Record with Map<String,String>
+     * Insert Kab Record with Map<String,String>
      *
      * @param map map with attributes to overwrite this models'. Keys are names of attributes of this model, values
      * @return void
      */
-    public static Module create(Map map) {
-        Module modul = new Module();
+    public static Kab create(Map map) {
+        Kab cat = new Kab();
         try {
-            modul.fromMap(map);
-            if (!modul.insert()) {
+            cat.fromMap(map);
+            if (!cat.insert()) {
                 ZHelper.setPesan("Ada Kesalahan diData Inputan!");
             } else ZHelper.setPesan("Data Berhasil.");
-            logger.info(ZHelper.getPesan());
+            ZHelper.logInfo(MKab.class, ZHelper.getPesan());
         } catch (DBException e) {
-            logger.error(e.getMessage() + " Insert Ke modul DB gagal", e);
+            ZHelper.logInfo(MKab.class, e.getMessage());
         }
-        return modul;
+        return cat;
     }
 
     /**
-     * Read all records in Module
+     * Read all records in Kab
      *
-     * @return LazyList<Module>
+     * @return LazyList<Kab>
      */
-    public static LazyList<Module> ReadAll() throws DBException {
-        return Module.findAll();
+    public static LazyList<Kab> ReadAll() throws DBException {
+        return Kab.findAll();
     }
 
     /**
-     * Read record in Module by ID
+     * Read record in Kab by ID
      *
      * @param ID Object
-     * @return Module
+     * @return Kab
      */
-    public static Module ReadByID(Object ID) throws DBException {
-        return Module.findById(ID);
+    public static Kab ReadByID(Object ID) throws DBException {
+        return Kab.findById(ID);
+    }
+
+    public static Kab ReadByName(Object NAME) throws DBException {
+        Kab cats = new Kab();
+        LazyList<Kab> cat = cats.find("keterangan = ?", NAME);
+        for (Kab mList : cat) {
+            cats = mList;
+        }
+        return cats;
+    }
+
+    public static String getKetByID(Object ID) throws DBException {
+        return Kab.findById(ID).getString("keterangan");
     }
 
     /**
-     * Update Module Record with Map<String,String>
+     * Update Kab Record with Map<String,String>
      *
      * @param map map with attributes to overwrite this models'. Keys are names of attributes of this model, values
      * @param ID  Long Generate ID ZHelperModel
@@ -88,18 +95,18 @@ public class MModule {
     public static boolean update(Map map, Long ID) throws DBException {
         boolean result = false;
         try {
-            Module module = Module.findById(ID);
-            module.fromMap(map);
-            result = module.saveIt();
-            logger.info("Update Data id : " + ID.toString());
+            Kab cat = Kab.findById(ID);
+            cat.fromMap(map);
+            result = cat.saveIt();
+            ZHelper.logInfo(MKab.class, "Update Data id : " + ID.toString());
         } catch (DBException e) {
-            logger.error(e.getMessage() + "Update Ke modul DB gagal", e);
+            ZHelper.logInfo(MKab.class, e.getMessage() + "Update Ke modul DB gagal");
         }
         return result;
     }
 
     public static boolean delete(Object ID) throws DBException {
-        return Module.findById(ID).delete();
+        return Kab.findById(ID).delete();
     }
 
     /**
@@ -112,15 +119,15 @@ public class MModule {
     public static boolean delete(String subquery, Object params) {
         boolean result = false;
         try {
-            LazyList<Module> mm = Module.where(subquery, params);
-            for (Module mList : mm) {
+            LazyList<Kab> mm = Kab.where(subquery, params);
+            for (Kab mList : mm) {
                 result = mList.delete();
             }
             ZHelper.setPesan("Data berhasil Dihapus");
-            logger.info(ZHelper.getPesan());
+            ZHelper.logInfo(MKab.class, ZHelper.getPesan());
             return result;
         } catch (DBException e) {
-            logger.error(e.getMessage(), e);
+            ZHelper.logInfo(MKab.class, e.getMessage());
             return result;
         }
     }

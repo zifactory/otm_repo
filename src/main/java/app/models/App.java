@@ -24,10 +24,12 @@ package app.models;
 
 import app.cores.IModel;
 import org.javalite.activejdbc.Model;
+import org.javalite.activejdbc.annotations.Many2Many;
 import org.javalite.activejdbc.annotations.Table;
 import zi.helper.ZHelperModel;
 
 @Table("tb_app")
+@Many2Many(other = Author.class, join = "content_creator", sourceFKName = "content_id", targetFKName = "creator_id")
 public class App extends Model implements IModel {
 
     @Override

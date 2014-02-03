@@ -2,8 +2,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8"/>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <!-- <meta content="width=device-width, initial-scale=1.0" name="viewport" /> -->
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <meta name="title" content=""/>
     <meta name="author" content=""/>
     <meta name="owner" content=""/>
@@ -36,7 +37,7 @@
         <div class="ntopbar row">
             <div class="span2">
                 <!-- BEGIN LOGO (you can use logo image instead of text)-->
-                <a class="brand logo-v1" href="index.html">
+                <a class="brand logo-v1" href="${context_path}">
                     <img src="${context_path}/asset/img/logo.png" id="logoimg" alt=""/>
                 </a>
                 <!-- END LOGO -->

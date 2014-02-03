@@ -1,5 +1,11 @@
 <@content for="title">Kontent Edukasi Indonesia </@content>
-<#--<@render partial="/pages/card_wrapper" />-->
+<#if contents??>
+    <@render partial="/pages/card_wrapper"/>
+</#if>
+<#if authuser??>
+    <@debug print=authuser.getListModul()/>
+    <#--${authuser.getListModul().Trading}-->
+</#if>
 <#--<#list kontent as book>-->
 <#--${book.judulKategori}<br/>-->
 <#--<#list book.content as cont>-->
@@ -7,9 +13,9 @@
 <#--</#list>-->
 <#--</#list>-->
 <#--<@debug print=kontent/>-->
-${id!""}
-<#if authuser??>
-${authuser.getTokenS()}
-<#--<@debug print=authuser.getUser().password/>-->
-</#if>
+<#--${id!""}-->
+<#--<#if authuser??>-->
+<#--${authuser.getTokenS()}-->
+<#--&lt;#&ndash;<@debug print=authuser.getUser().password/>&ndash;&gt;-->
+<#--</#if>-->
 

@@ -22,29 +22,33 @@
  */
 package zi.helper;
 
+import app.models.Module;
 import app.models.User;
 import app.modules.user.MUser;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.AuthenticationToken;
 import org.apache.shiro.authc.UsernamePasswordToken;
+import org.apache.shiro.crypto.hash.Sha256Hash;
+import org.apache.shiro.util.SimpleByteSource;
 import org.javalite.activejdbc.DBException;
+import org.javalite.activejdbc.LazyList;
 
 import java.io.Serializable;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 public class ZHelperAuth implements Serializable {
 
     private static ZHelperAuth singleton;
     private boolean authenc = false;
     private User user = null;
+    private LazyList<Module> module = null;
     private char[] tokenLogin = null;
     private AuthenticationToken authToken = null;
-
-    public ZHelperAuth() {
-    }
+    private Map authModuls = null;
 
     public static synchronized ZHelperAuth getInstance() {
-
         try {
             if (null == singleton) {
                 singleton = new ZHelperAuth();
@@ -57,6 +61,26 @@ public class ZHelperAuth implements Serializable {
 
     public static void logout() {
 
+    }
+
+    public static String simpleHash(String password) {
+        Sha256Hash sha256Hash = new Sha256Hash(password);
+        String result = sha256Hash.toHex();
+
+        System.out.println("Simple hash: " + result);
+        return result;
+    }
+
+    public static String simpleSaltedHash(String username, String password) {
+        return simpleSaltedHash(username, password, "OTransmedia.2.0");
+    }
+
+    public static String simpleSaltedHash(String key1, String key2, String salt) {
+        Sha256Hash sha256Hash = new Sha256Hash(key2, (new SimpleByteSource(salt + key1)).getBytes());
+        String result = sha256Hash.toHex();
+
+        ZHelper.logInfo(ZHelper.class, key1 + " simple salted hash: " + result);
+        return result;
     }
 
     public void setisAuth(boolean auth) {
@@ -87,9 +111,17 @@ public class ZHelperAuth implements Serializable {
                 setisAuth(false);
                 return;
             } else {
+                //untuk koleksi module si user berdasarkan grp idnya
+                ZHelper.logInfo(ZHelperAuth.class, String.valueOf(UserDB.getLong("grp_id")));
+                LazyList<Module> lMdl = MUser.getModules(UserDB.getLong("grp_id"));
+                Map<String, Object> aModuls = new HashMap<>();
+                for (Module mdl : lMdl) {
+                    aModuls.put(mdl.getString("key_mod"), mdl.getString("nama"));
+                }
+                setListModul(aModuls);
                 setUser(UserDB);
                 //tokenLogin {emailpassword + ip}
-                setTokenLogin(ZHelper.simpleSaltedHash(UserDB.get("email").toString(), UserDB.get("password").toString(), userPassToken.getHost()).toCharArray());
+                setTokenLogin(simpleSaltedHash(UserDB.get("email").toString(), UserDB.get("password").toString(), userPassToken.getHost()).toCharArray());
                 ZHelper.logInfo(ZHelperAuth.class, "account found for user [" + username + "] in <" + userPassToken.getHost() + "> :: => [" + String.valueOf(getToken()) + "]");
             }
 
@@ -118,6 +150,14 @@ public class ZHelperAuth implements Serializable {
         }
     }
 
+    public Map getListModul() {
+        return this.authModuls;
+    }
+
+    private void setListModul(Map aModuls) {
+        this.authModuls = aModuls;
+    }
+
     public AuthenticationToken getAuthToken() {
         return authToken;
     }
@@ -144,5 +184,13 @@ public class ZHelperAuth implements Serializable {
 
     public void setTokenLogin(char[] token) {
         this.tokenLogin = token;
+    }
+
+    public LazyList<Module> getModules() {
+        return module;
+    }
+
+    public void setModule(LazyList<Module> module) {
+        this.module = module;
     }
 }

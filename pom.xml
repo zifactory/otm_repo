@@ -7,7 +7,7 @@
     <groupId>otm_repo</groupId>
     <artifactId>otm_repo</artifactId>
     <packaging>war</packaging>
-    <version>1.0-SNAPSHOT</version>
+    <version>0.8.1</version>
     <name>otm_repo</name>
 
     <properties>
@@ -16,8 +16,7 @@
         <jdbc.user>root</jdbc.user>
         <jdbc.password>root</jdbc.password>
         <!--<jdbc.test.url>jdbc:mysql://localhost/simple_test</jdbc.test.url>-->
-        <coffee-maven-plugin.version>1.4.1</coffee-maven-plugin.version>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding>
         <project.build.resourceEncoding>ISO-8859-1</project.build.resourceEncoding>
         <jackson-2-version>2.2.2</jackson-2-version>
     </properties>
@@ -26,8 +25,37 @@
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
+                <artifactId>maven-clean-plugin</artifactId>
                 <version>2.5</version>
+                <executions>
+                    <execution>
+                        <id>cleanup</id>
+                        <phase>clean</phase>
+                        <goals>
+                            <goal>clean</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <filesets>
+                        <fileset>
+                            <directory>${project.build.directory}</directory>
+                            <includes>
+                                <include>**/*.*</include>
+                                <include>**</include>
+                                <include>.*</include>
+                            </includes>
+                            <followSymlinks>true</followSymlinks>
+                        </fileset>
+                    </filesets>
+                    <failOnError>false</failOnError>
+                    <verbose>false</verbose>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.16</version>
                 <configuration>
                     <reportFormat>brief</reportFormat>
                     <trimStackTrace>true</trimStackTrace>
@@ -39,12 +67,17 @@
                 </configuration>
             </plugin>
             <plugin>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>1.5</source>
-                    <target>1.5</target>
-                    <encoding>${project.build.sourceEncoding}</encoding>
-                </configuration>
+                <groupId>org.javalite</groupId>
+                <artifactId>activejdbc-instrumentation</artifactId>
+                <version>1.4.9</version>
+                <executions>
+                    <execution>
+                        <phase>process-classes</phase>
+                        <goals>
+                            <goal>instrument</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
             <plugin>
                 <groupId>com.carbonfive.db-support</groupId>
@@ -84,7 +117,16 @@
                     <!--</execution>-->
                 </executions>
             </plugin>
-
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                </configuration>
+            </plugin>
             <plugin>
                 <!--<groupId>org.mortbay.jetty</groupId>-->
                 <!--<artifactId>maven-jetty-plugin</artifactId>-->
@@ -109,37 +151,7 @@
                     </dependency>
                 </dependencies>
             </plugin>
-            <plugin>
-                <groupId>org.javalite</groupId>
-                <artifactId>activejdbc-instrumentation</artifactId>
-                <version>1.4.8</version>
-                <executions>
-                    <execution>
-                        <phase>process-classes</phase>
-                        <goals>
-                            <goal>instrument</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-
             <!-- Minify JS CSS-->
-            <!--<plugin>-->
-            <!--<groupId>org.apache.maven.plugins</groupId>-->
-            <!--<artifactId>maven-war-plugin</artifactId>-->
-            <!--<version>2.4</version>-->
-            <!--<configuration>-->
-            <!--<warSourceExcludes>-->
-            <!--**/reset.css,**/fonts.css,**/base.css,**/toc.css,**/samaxesjs.core.js,**/samaxesjs.toc.js-->
-            <!--</warSourceExcludes>-->
-            <!--<archive>-->
-            <!--<manifest>-->
-            <!--<addDefaultImplementationEntries>true</addDefaultImplementationEntries>-->
-            <!--</manifest>-->
-            <!--<addMavenDescriptor>false</addMavenDescriptor>-->
-            <!--</archive>-->
-            <!--</configuration>-->
-            <!--</plugin>-->
             <plugin>
                 <groupId>com.samaxes.maven</groupId>
                 <artifactId>minify-maven-plugin</artifactId>
@@ -179,36 +191,24 @@
                     </execution>
                 </executions>
             </plugin>
-            <!-- COFFEESCRIPT -->
-            <!--<plugin>-->
-            <!--<groupId>com.theoryinpractise</groupId>-->
-            <!--<artifactId>coffee-maven-plugin</artifactId>-->
-            <!--<version>${coffee-maven-plugin.version}</version>-->
-            <!--<executions>-->
-            <!--<execution>-->
-            <!--<goals>-->
-            <!--<goal>coffee</goal>-->
-            <!--</goals>-->
-            <!--</execution>-->
-            <!--</executions>-->
-            <!--<configuration>-->
-            <!--<coffeeDir>${basedir}/src/main/webapp/asset/coffee</coffeeDir>-->
-            <!--<coffeeOutputDirectory>${basedir}/src/main/webapp/asset/scripts/kopi</coffeeOutputDirectory>-->
-            <!--</configuration>-->
-            <!--</plugin>-->
-
         </plugins>
     </build>
     <dependencies>
         <dependency>
             <groupId>org.javalite</groupId>
             <artifactId>activeweb</artifactId>
-            <version>1.9.3.1</version>
+            <version>1.10</version>
+            <!--<version>1.9.3.1</version>-->
         </dependency>
         <dependency>
             <groupId>org.javalite</groupId>
             <artifactId>activejdbc</artifactId>
             <version>1.4.9.1</version>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.26</version>
         </dependency>
         <!-- the core, which includes Streaming API, shared low-level abstractions (but NOT data-binding) -->
         <dependency>
@@ -223,22 +223,22 @@
             <version>${jackson-2-version}</version>
         </dependency>
         <!-- smile (binary JSON). Other artifacts in this group do other formats. -->
+        <!-- <dependency>
+             <groupId>com.fasterxml.jackson.dataformat</groupId>
+             <artifactId>jackson-dataformat-smile</artifactId>
+             <version>${jackson-2-version}</version>
+         </dependency>-->
+        <!--for image handler-->
         <dependency>
-            <groupId>com.fasterxml.jackson.dataformat</groupId>
-            <artifactId>jackson-dataformat-smile</artifactId>
-            <version>${jackson-2-version}</version>
+            <groupId>net.coobird</groupId>
+            <artifactId>thumbnailator</artifactId>
+            <version>0.4.7</version>
         </dependency>
-
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.11</version>
             <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.26</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -252,6 +252,12 @@
             <version>1.2.2</version>
         </dependency>
         <!--end apache shiro-->
+        <!-- epub converting-->
+        <dependency>
+            <groupId>com.gmail.elinares</groupId>
+            <artifactId>LRFTools</artifactId>
+            <version>0.9.241</version>
+        </dependency>
         <dependency>
             <groupId>com.sun</groupId>
             <artifactId>tools</artifactId>

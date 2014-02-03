@@ -25,7 +25,6 @@ package zi.helper;
 import com.fasterxml.jackson.core.JsonGenerationException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.javalite.activejdbc.Base;
 import org.javalite.activejdbc.LazyList;
 import org.javalite.activejdbc.Model;
 import org.javalite.activeweb.AppController;
@@ -52,15 +51,15 @@ public class ZGridView<T extends Model> {
     *  Grid == template ftl
     * */
     public ZGridView() {
-        this.grid = new HashMap<String, Object>();
+        this.grid = new HashMap<>();
     }
 
     public ZGridView(Class<? extends AppController> controller) {
         this.c = controller;
-        this.grid = new HashMap<String, Object>();
+        this.grid = new HashMap<>();
     }
 
-    public <V extends Model> String JsonDatatable( V V, Map<String,String> params) {
+    public <V extends Model> String JsonDatatable(V V, Map<String, String> params) {
 //        Base.open("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/otm_repo", "root", "root");
   /*
         *  column field from database
@@ -141,7 +140,7 @@ public class ZGridView<T extends Model> {
         }
      * */
         String sWhere = "";
-        Vector<Object> sParams = new Vector<Object>();
+        Vector<Object> sParams = new Vector<>();
 
         if (params.containsKey("sSearch") && !params.get("sSearch").equals("")) {
             for (int i = 0; i < aColumns.length; i++) {
@@ -205,9 +204,9 @@ public class ZGridView<T extends Model> {
         /*
         * Data aaData Vector
         * */
-        Vector<Object> aaData = new Vector<Object>();
+        Vector<Object> aaData = new Vector<>();
         for (V cat : rResult) {
-            Vector<Object> ct = new Vector<Object>();
+            Vector<Object> ct = new Vector<>();
             ct.removeAllElements();
             for (String sColumn : aColumns) {
                 ct.addElement(cat.get(sColumn));
@@ -225,7 +224,7 @@ public class ZGridView<T extends Model> {
         );
          */
 
-        HashMap<String, Object> output = new HashMap<String, Object>();
+        HashMap<String, Object> output = new HashMap<>();
         output.put("sEcho", params.get("sEcho"));
         output.put("iTotalRecords", iTotal);
         output.put("iTotalDisplayRecords", iFilteredTotal);

@@ -1,22 +1,21 @@
 /**
  * Copyright 2013 Nanang Suryadi || nanang.ask@gmail.com
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
  *
  * http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
  */
-
 /**
- * Namespace app.modules.main
- * Class MCategory.java
+ * Namespace app.modules.main Class MCategory.java
+ *
  * @date 12/10/13
  * @author Nanang Suryadi <nanang.ask@gmail.com>
  */
@@ -37,7 +36,8 @@ public class MCategory {
     /**
      * Insert Category Record with Map<String,String>
      *
-     * @param map map with attributes to overwrite this models'. Keys are names of attributes of this model, values
+     * @param map map with attributes to overwrite this models'. Keys are names
+     * of attributes of this model, values
      * @return void
      */
     public static Category create(Map map) {
@@ -46,7 +46,9 @@ public class MCategory {
             cat.fromMap(map);
             if (!cat.insert()) {
                 ZHelper.setPesan("Ada Kesalahan diData Inputan!");
-            } else ZHelper.setPesan("Data Berhasil.");
+            } else {
+                ZHelper.setPesan("Data Berhasil.");
+            }
             ZHelper.logInfo(MCategory.class, ZHelper.getPesan());
         } catch (DBException e) {
             ZHelper.logInfo(MCategory.class, e.getMessage());
@@ -73,9 +75,9 @@ public class MCategory {
         return Category.findById(ID);
     }
 
-    public static Category ReadByName(Object NAME) throws DBException {
-        Category cats = new Category();
-        LazyList<Category> cat = cats.find("email = ?", NAME);
+    public static Category ReadByKeterangan(Object NAME) throws DBException {
+        Category cats = null;
+        LazyList<Category> cat = cats.find("keterangan = ?", NAME);
         for (Category mList : cat) {
             cats = mList;
         }
@@ -89,8 +91,9 @@ public class MCategory {
     /**
      * Update Category Record with Map<String,String>
      *
-     * @param map map with attributes to overwrite this models'. Keys are names of attributes of this model, values
-     * @param ID  Long Generate ID ZHelperModel
+     * @param map map with attributes to overwrite this models'. Keys are names
+     * of attributes of this model, values
+     * @param ID Long Generate ID ZHelperModel
      * @return true if record has ID
      */
     public static boolean update(Map map, Long ID) throws DBException {
@@ -111,9 +114,11 @@ public class MCategory {
     }
 
     /**
-     * @param subquery this is a set of conditions that normally follow the "where" clause. Example:
-     *                 <code>"department = ? and dob > ?"</code>. If this value is "*" and no parameters provided, then findAll is executed.
-     * @param params   list of parameters corresponding to the place holders in the subquery.
+     * @param subquery this is a set of conditions that normally follow the
+     * "where" clause. Example: <code>"department = ? and dob > ?"</code>. If
+     * this value is "*" and no parameters provided, then findAll is executed.
+     * @param params list of parameters corresponding to the place holders in
+     * the subquery.
      * @return boolean
      * @throws DBException
      */

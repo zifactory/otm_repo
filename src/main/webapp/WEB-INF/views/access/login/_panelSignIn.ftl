@@ -41,7 +41,5 @@
         </div>
     </li>
 <#--<li><a href="#"><i class="icon-gears"></i><span>New Member? Sign Up</span></a></li>-->
-    <li><a href="${context_path}/3" class="link_blue"><i
-            class="fa fa-gears"></i><span>New Member? Sign up now</span></a></li>
-
+    <li><a href="${context_path}/3" class="link_blue"><i class="fa fa-gears"></i><span>New Member? Sign up now</span></a></li>
 </ul>

@@ -9,8 +9,9 @@
     <li><a href="${context_path}/0/${(authuser.getUser().id)!0}"><i
             class="fa fa-user"></i> - Profile<span class="badge badge-icon"></span></a></li>
     <li><a href="#"><i class="fa fa-home"></i> - Trading<span class="badge badge-important">3</span></a></li>
-    <li><a href="#"><i class="fa fa-hdd"></i> - Inventory<span class="badge badge-important">3</span></a></li>
-    <li><a href="#"><i class="fa fa-md"></i> - Friends<span class="badge badge-important">3</span></a></li>
+    <li><a href="${context_path}/1/content/${(authuser.getUser().id)!0}/dashboard"><i class="fa fa-hdd-o"></i> - Inventory<span class="badge badge-important">3</span></a></li>
+    <li><a href="#"><i class="fa fa-bookmark"></i> - Collection<span class="badge badge-important">3</span></a></li>
+    <li><a href="#"><i class="fa fa-user-md"></i> - Friends<span class="badge badge-important">3</span></a></li>
 
     <li><a href="#"><i
             class="fa fa-money"></i> - Balance {IDR100k}<span class="badge badge-icon"></span></a></li>

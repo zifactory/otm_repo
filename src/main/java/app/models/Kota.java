@@ -32,7 +32,9 @@ public class Kota extends Model implements IModel {
 
     @Override
     public boolean insert() {
-        setId(ZHelperModel.getGenerateID());
-        return super.insert();
+        if (getId() == null) {
+            setId(ZHelperModel.getGenerateID());
+            return super.insert();
+        } else return super.save();
     }
 }

@@ -33,7 +33,7 @@
                 },
                 "fnDrawCallback": function () {
                     $("a[data-linkto]").bind("click", function () {
-                        console.log("One Ok Rock");
+
                         var anchor = $(this);
                         var destination = anchor.attr("data-destination");
 
@@ -160,21 +160,21 @@
             </div>
             <table class="table table-striped table-bordered table-hover table-full-width" id="dTable">
                 <thead>
-                <tr>
+                    <tr>
                 <#list gridview.colnames as titleCol >
-                    <th>${ titleCol!"1" }</th>
-                </#list>
-                    <th></th>
-                    <th></th>
+                        <th>${ titleCol!"1" }</th>
+                        </#list>
+                        <th></th>
+                        <th></th>
                 <#if (gridview.print)?? >
-                    <th></th>
-                </#if>
-                </tr>
+                        <th></th>
+                        </#if>
+                    </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td colspan="5" class="dataTables_empty">Loading data from server</td>
-                </tr>
+                    <tr>
+                        <td colspan="5" class="dataTables_empty">Loading data from server</td>
+                    </tr>
                 </tbody>
             </table>
         </div>
