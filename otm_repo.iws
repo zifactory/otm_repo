@@ -6,94 +6,14 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="814003aa-0116-4072-9e91-8892914118e0" name="Default" comment="ver. 0.2.2 Category dan user profilemodul">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/app/controllers/contents/BooksController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CHANGELOG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/app/test/ContentBuilderTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/app/controllers/setting/GroupController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/app/controllers/contents/InventoryController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/app/models/Kab.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/app/controllers/setting/KabController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/app/controllers/setting/KotaController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/app/modules/user/MAuthor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/app/modules/product/MContentBook.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/app/modules/product/MContentVideo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/app/modules/main/MKab.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/app/modules/main/MKota.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/app/modules/main/MTag.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/app/test/ManyToManyTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/app/controllers/setting/Route404Controller.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/app/models/Tag.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/app/controllers/contents/VideosController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/zi/helper/ZUtilContent.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/app/test/ZhelperTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/contents/books/a001.ftl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/contents/inventory/a001.ftl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/contents/videos/a001.ftl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/setting/group/fgrp.ftl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/setting/kab/fkb.ftl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/setting/kota/fkt.ftl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/asset/scripts/kopi/hogan.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/navbar.ftl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/asset/scripts/kopi/typeahead.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/app/modules/user/MModule.java" afterPath="$PROJECT_DIR$/src/main/java/app/modules/main/MModule.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pages/_card_book_produk.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pages/_card_content_avatar.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/app/models/App.java" afterPath="$PROJECT_DIR$/src/main/java/app/models/App.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/app/config/AppControllerConfig.java" afterPath="$PROJECT_DIR$/src/main/java/app/config/AppControllerConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/app/models/Author.java" afterPath="$PROJECT_DIR$/src/main/java/app/models/Author.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/app/models/Book.java" afterPath="$PROJECT_DIR$/src/main/java/app/models/Book.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Build.ini" afterPath="$PROJECT_DIR$/Build.ini" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/app/models/Category.java" afterPath="$PROJECT_DIR$/src/main/java/app/models/Category.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/app/controllers/setting/CategoryController.java" afterPath="$PROJECT_DIR$/src/main/java/app/controllers/setting/CategoryController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/app/models/Group.java" afterPath="$PROJECT_DIR$/src/main/java/app/models/Group.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/zi/helper/test/HashTokenTest.java" afterPath="$PROJECT_DIR$/src/test/java/zi/helper/test/HashTokenTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/app/controllers/HomeController.java" afterPath="$PROJECT_DIR$/src/main/java/app/controllers/HomeController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/app/models/Kota.java" afterPath="$PROJECT_DIR$/src/main/java/app/models/Kota.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/app/controllers/access/LoginController.java" afterPath="$PROJECT_DIR$/src/main/java/app/controllers/access/LoginController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/app/modules/main/MCategory.java" afterPath="$PROJECT_DIR$/src/main/java/app/modules/main/MCategory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/app/modules/user/MGroup.java" afterPath="$PROJECT_DIR$/src/main/java/app/modules/user/MGroup.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/app/modules/user/MUser.java" afterPath="$PROJECT_DIR$/src/main/java/app/modules/user/MUser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/app/models/Module.java" afterPath="$PROJECT_DIR$/src/main/java/app/models/Module.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/app/controllers/accounts/ProfilesController.java" afterPath="$PROJECT_DIR$/src/main/java/app/controllers/accounts/ProfilesController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/app/config/RouteConfig.java" afterPath="$PROJECT_DIR$/src/main/java/app/config/RouteConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tasks.me" afterPath="$PROJECT_DIR$/Tasks.me" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/app/test/UnmanagedID.java" afterPath="$PROJECT_DIR$/src/test/java/app/test/UnmanagedID.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/app/models/User.java" afterPath="$PROJECT_DIR$/src/main/java/app/models/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/app/modules/test/UserTest.java" afterPath="$PROJECT_DIR$/src/test/java/app/modules/test/UserTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/app/models/Video.java" afterPath="$PROJECT_DIR$/src/main/java/app/models/Video.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/zi/helper/ZGridView.java" afterPath="$PROJECT_DIR$/src/main/java/zi/helper/ZGridView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/zi/helper/ZHelper.java" afterPath="$PROJECT_DIR$/src/main/java/zi/helper/ZHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/zi/helper/ZHelperAuth.java" afterPath="$PROJECT_DIR$/src/main/java/zi/helper/ZHelperAuth.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/zi/helper/ZHelperModel.java" afterPath="$PROJECT_DIR$/src/main/java/zi/helper/ZHelperModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pages/_card_content.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pages/_card_content.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pages/_card_wrapper.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pages/_card_wrapper.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/cores/_messagebox.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/cores/_messagebox.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/access/login/_panelSignIn.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/access/login/_panelSignIn.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/access/login/_panelUser.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/access/login/_panelUser.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/layouts/default_layout.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/layouts/default_layout.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/setting/category/fcats.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/setting/category/fcats.ftl" />
+    <list default="true" id="814003aa-0116-4072-9e91-8892914118e0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/asset/fonts/font.css" afterPath="$PROJECT_DIR$/src/main/webapp/asset/fonts/font.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/layouts/footer.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/layouts/footer.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/layouts/gridViewJson.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/layouts/gridViewJson.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/access/login/index.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/access/login/index.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/accounts/profiles/index.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/accounts/profiles/index.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/greeting/index.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/greeting/index.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home/index.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home/index.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/layouts/navbar.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/layouts/navbar.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/otm_repo.iml" afterPath="$PROJECT_DIR$/otm_repo.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/otm_repo.ipr" afterPath="$PROJECT_DIR$/otm_repo.ipr" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/otm_repo.iws" afterPath="$PROJECT_DIR$/otm_repo.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/asset/scripts/kopi/punk.js" afterPath="$PROJECT_DIR$/src/main/webapp/asset/scripts/kopi/punk.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/asset/css/style.css" afterPath="$PROJECT_DIR$/src/main/webapp/asset/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/layouts/system_error.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/layouts/system_error.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/system_error.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/system_error.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/layouts/wcontent.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/layouts/wcontent.ftl" />
     </list>
     <ignored path="otm_repo.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/pom.xml" changelist="814003aa-0116-4072-9e91-8892914118e0" time="1390448832829" ignored="false" />
-    <file path="/Dummy.txt" changelist="814003aa-0116-4072-9e91-8892914118e0" time="1391413593958" ignored="false" />
+    <file path="/Dummy.txt" changelist="814003aa-0116-4072-9e91-8892914118e0" time="1391413615743" ignored="false" />
     <file path="/dummy.txt" changelist="814003aa-0116-4072-9e91-8892914118e0" time="1391401486810" ignored="false" />
     <file path="/sys.conf" changelist="814003aa-0116-4072-9e91-8892914118e0" time="1382431884579" ignored="false" />
     <file path="/MainFilterC.java" changelist="814003aa-0116-4072-9e91-8892914118e0" time="1386832107039" ignored="false" />
@@ -812,17 +732,7 @@
     <favorites_list name="otm_repo" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="CHANGELOG" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/CHANGELOG">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="10" selection-end="654" vertical-scroll-proportion="0.05221932">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -1180,7 +1090,7 @@
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/access" />
     </key>
   </component>
-  <component name="RunManager" selected="Maven.otm_offline">
+  <component name="RunManager" selected="Maven.otm_repo [-X,clean]">
     <configuration default="false" name="otm_repo [-X,clean]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -1788,7 +1698,11 @@
       <created>1387353335038</created>
       <updated>1387353335038</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="- [major] database tabel tags_content dihapus&#10;- [major] database tabel tags berubah sesuai activejdbc sistem polymorphic&#10;- [minor] untuk data autocomplete menggunakan typeaheadjs ajax&#10;- [minor] untuk data multiple input menggunakan select2 ajax&#10;- [major] Relationship (ForeignKey) tb_app , tb_video dan tb_buku untuk tabel content_creator dihapus dikarena ambigous FK&#10;- [minor] CURD content Video dan Buku lebih !hati2 saat update dan delete untuk FK tabel&#10;- [minor] fungsi javascropt selectFunk() digunakan untuk ajax pada select2 multiple input (tags label style)&#10;- [minor] saat delete content ditambahkan fungsi clear folder dan file content">
+      <created>1391413694132</created>
+      <updated>1391413694132</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1813,19 +1727,20 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="48" y="-5" width="1319" height="774" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6912" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6912" sideWeight="0.4996066" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16915815" sideWeight="0.6752" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24980237" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39872408" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3248" sideWeight="0.5003934" order="13" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3248" sideWeight="0.5003934" order="13" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32964426" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3248" sideWeight="0.4996066" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3248" sideWeight="0.4996066" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3248" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32964426" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21085759" sideWeight="0.44" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1834,12 +1749,11 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21085759" sideWeight="0.3776" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33652312" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.336" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2272" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3248" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39872408" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36044657" sideWeight="0.49881983" order="7" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1886,7 +1800,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="ver. 0.2.2 Category dan user profilemodul" />
+    <option name="LAST_COMMIT_MESSAGE" value="- [major] database tabel tags_content dihapus&#10;- [major] database tabel tags berubah sesuai activejdbc sistem polymorphic&#10;- [minor] untuk data autocomplete menggunakan typeaheadjs ajax&#10;- [minor] untuk data multiple input menggunakan select2 ajax&#10;- [major] Relationship (ForeignKey) tb_app , tb_video dan tb_buku untuk tabel content_creator dihapus dikarena ambigous FK&#10;- [minor] CURD content Video dan Buku lebih !hati2 saat update dan delete untuk FK tabel&#10;- [minor] fungsi javascropt selectFunk() digunakan untuk ajax pada select2 multiple input (tags label style)&#10;- [minor] saat delete content ditambahkan fungsi clear folder dan file content" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1907,6 +1821,7 @@
     <MESSAGE value="ver. 0.1.0 ORM javabean" />
     <MESSAGE value="ver. 0.2.1 User login and error modul" />
     <MESSAGE value="ver. 0.2.2 Category dan user profilemodul" />
+    <MESSAGE value="- [major] database tabel tags_content dihapus&#10;- [major] database tabel tags berubah sesuai activejdbc sistem polymorphic&#10;- [minor] untuk data autocomplete menggunakan typeaheadjs ajax&#10;- [minor] untuk data multiple input menggunakan select2 ajax&#10;- [major] Relationship (ForeignKey) tb_app , tb_video dan tb_buku untuk tabel content_creator dihapus dikarena ambigous FK&#10;- [minor] CURD content Video dan Buku lebih !hati2 saat update dan delete untuk FK tabel&#10;- [minor] fungsi javascropt selectFunk() digunakan untuk ajax pada select2 multiple input (tags label style)&#10;- [minor] saat delete content ditambahkan fungsi clear folder dan file content" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1928,7 +1843,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/app/modules/product/MContentVideo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="32" selection-start="2041" selection-end="2049" vertical-scroll-proportion="0.59469026" />
+        <state line="71" column="32" selection-start="2041" selection-end="2049" vertical-scroll-proportion="0.59469026">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/contents/books/a001.ftl">
@@ -1948,7 +1865,9 @@
     </entry>
     <entry file="jar:///opt/jdk1.7.0_45/src.zip!/java/io/File.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1030" column="9" selection-start="42690" selection-end="42690" vertical-scroll-proportion="0.0" />
+        <state line="1030" column="9" selection-start="42690" selection-end="42690" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/app/test/ContentBuilderTest.java">
@@ -1958,7 +1877,9 @@
     </entry>
     <entry file="jar://$PROJECT_DIR$/../../../../maven-repo/org/javalite/activeweb/1.10/activeweb-1.10-sources.jar!/org/javalite/activeweb/HttpSupport.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1290" column="21" selection-start="42214" selection-end="42214" vertical-scroll-proportion="0.3327645" />
+        <state line="1290" column="21" selection-start="42214" selection-end="42214" vertical-scroll-proportion="0.3327645">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/app/test/ZhelperTest.java">
@@ -2003,7 +1924,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CHANGELOG">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="10" selection-end="654" vertical-scroll-proportion="0.05221932">
+        <state line="8" column="53" selection-start="629" selection-end="629" vertical-scroll-proportion="0.27303755">
           <folding />
         </state>
       </provider>
