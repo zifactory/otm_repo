@@ -16,9 +16,9 @@
                                placeholder="Judul Video" value="${(formulir.fvideo.judul)!""}"/>
                     </div>
                     <div class="form-group">
-                        <label for="penerbit">Penerbit : </label>
+                        <label for="penerbit">Creator : </label>
                         <input type="text" class="form-control" name="penerbit_nama" id="penerbit"
-                               placeholder="Penerbit Buku" data-th="pubs"
+                               placeholder="Creator" data-th="pubs"
                                value="${(formulir.fpub.nama)!""}" autocomplete="off"/>
                         <input type="hidden" class="form-control" name="penerbit_id"
                                value="${(formulir.fpub.id)!""}"/>
@@ -31,7 +31,7 @@
                     <div class="form-group">
                         <label for="kategori">Kategori : </label>
                         <input type="text" class="form-control" name="kategori_nama" id="kategori"
-                               placeholder="Kategori Buku" data-th="cats"
+                               placeholder="Kategori" data-th="cats"
                                value="${(formulir.fcat.keterangan)!""}" autocomplete="off"/>
                         <input type="hidden" class="form-control" name="kategori_id"
                                value="${(formulir.fcat.id)!""}"/>

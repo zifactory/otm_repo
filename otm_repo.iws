@@ -6,15 +6,27 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="814003aa-0116-4072-9e91-8892914118e0" name="Default" comment="- [major] database tabel tags_content dihapus&#10;- [major] database tabel tags berubah sesuai activejdbc sistem polymorphic&#10;- [minor] untuk data autocomplete menggunakan typeaheadjs ajax&#10;- [minor] untuk data multiple input menggunakan select2 ajax&#10;- [major] Relationship (ForeignKey) tb_app , tb_video dan tb_buku untuk tabel content_creator dihapus dikarena ambigous FK&#10;- [minor] CURD content Video dan Buku lebih !hati2 saat update dan delete untuk FK tabel&#10;- [minor] fungsi javascropt selectFunk() digunakan untuk ajax pada select2 multiple input (tags label style)&#10;- [minor] saat delete content ditambahkan fungsi clear folder dan file content">
+    <list default="true" id="814003aa-0116-4072-9e91-8892914118e0" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/README" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/conf/sys.conf" afterPath="$PROJECT_DIR$/src/main/resources/sys.conf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CHANGELOG" afterPath="$PROJECT_DIR$/CHANGELOG" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/app/controllers/HomeController.java" afterPath="$PROJECT_DIR$/src/main/java/app/controllers/HomeController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tasks.me" afterPath="$PROJECT_DIR$/Tasks.me" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/zi/helper/ZHelperConfig.java" afterPath="$PROJECT_DIR$/src/main/java/zi/helper/ZHelperConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/access/login/_panelSignIn.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/access/login/_panelSignIn.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/contents/videos/a001.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/contents/videos/a001.ftl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/asset/fonts/font.css" afterPath="$PROJECT_DIR$/src/main/webapp/asset/fonts/font.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/access/login/index.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/access/login/index.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/otm_repo.iml" afterPath="$PROJECT_DIR$/otm_repo.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/otm_repo.ipr" afterPath="$PROJECT_DIR$/otm_repo.ipr" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/otm_repo.iws" afterPath="$PROJECT_DIR$/otm_repo.iws" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
     </list>
     <ignored path="otm_repo.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/pom.xml" changelist="814003aa-0116-4072-9e91-8892914118e0" time="1390448832829" ignored="false" />
-    <file path="/Dummy.txt" changelist="814003aa-0116-4072-9e91-8892914118e0" time="1391413974805" ignored="false" />
-    <file path="/dummy.txt" changelist="814003aa-0116-4072-9e91-8892914118e0" time="1391414024573" ignored="false" />
+    <file path="/Dummy.txt" changelist="814003aa-0116-4072-9e91-8892914118e0" time="1391507290367" ignored="false" />
+    <file path="/dummy.txt" changelist="814003aa-0116-4072-9e91-8892914118e0" time="1391433512154" ignored="false" />
     <file path="/sys.conf" changelist="814003aa-0116-4072-9e91-8892914118e0" time="1382431884579" ignored="false" />
     <file path="/MainFilterC.java" changelist="814003aa-0116-4072-9e91-8892914118e0" time="1386832107039" ignored="false" />
     <file path="/20131022085655.sql" changelist="814003aa-0116-4072-9e91-8892914118e0" time="1382433263399" ignored="false" />
@@ -68,7 +80,7 @@
     <file path="/style.css" changelist="814003aa-0116-4072-9e91-8892914118e0" time="1390149507227" ignored="false" />
     <file path="/punk.js" changelist="814003aa-0116-4072-9e91-8892914118e0" time="1391334242899" ignored="false" />
     <file path="/card_produk.ftl" changelist="814003aa-0116-4072-9e91-8892914118e0" time="1383534054003" ignored="false" />
-    <file path="/HomeController.java" changelist="814003aa-0116-4072-9e91-8892914118e0" time="1389603981991" ignored="false" />
+    <file path="/HomeController.java" changelist="814003aa-0116-4072-9e91-8892914118e0" time="1391432121744" ignored="false" />
     <file path="/_card_wrapper.ftl" changelist="814003aa-0116-4072-9e91-8892914118e0" time="1389020521347" ignored="false" />
     <file path="/_card_app_produk.ftl" changelist="814003aa-0116-4072-9e91-8892914118e0" time="1383540410255" ignored="false" />
     <file path="/_card_book_produk.ftl" changelist="814003aa-0116-4072-9e91-8892914118e0" time="1387437068803" ignored="false" />
@@ -86,9 +98,9 @@
     <file path="/var/www/web/dishub/zi/cores/Controller.php" changelist="814003aa-0116-4072-9e91-8892914118e0" time="1383555828501" ignored="false" />
     <file path="/Controller.php" changelist="814003aa-0116-4072-9e91-8892914118e0" time="1383555822431" ignored="false" />
     <file path="/_card_detail.ftl" changelist="814003aa-0116-4072-9e91-8892914118e0" time="1383702999069" ignored="false" />
-    <file path="/Tasks.me" changelist="814003aa-0116-4072-9e91-8892914118e0" time="1389717215497" ignored="false" />
+    <file path="/Tasks.me" changelist="814003aa-0116-4072-9e91-8892914118e0" time="1391435452665" ignored="false" />
     <file path="/_panelSignUp.ftl" changelist="814003aa-0116-4072-9e91-8892914118e0" time="1383795545650" ignored="false" />
-    <file path="/_panelSignIn.ftl" changelist="814003aa-0116-4072-9e91-8892914118e0" time="1386815446730" ignored="false" />
+    <file path="/_panelSignIn.ftl" changelist="814003aa-0116-4072-9e91-8892914118e0" time="1391435304806" ignored="false" />
     <file path="/LogController.java" changelist="814003aa-0116-4072-9e91-8892914118e0" time="1384137497445" ignored="false" />
     <file path="$PROJECT_DIR$/../../../../JAVA/IdeaProjects/mvnProject/kitchensink/pom.xml" changelist="814003aa-0116-4072-9e91-8892914118e0" time="1384160033395" ignored="false" />
     <file path="/LoginFilter.java" changelist="814003aa-0116-4072-9e91-8892914118e0" time="1386224172526" ignored="false" />
@@ -99,7 +111,7 @@
     <file path="/HashTokenTest.java" changelist="814003aa-0116-4072-9e91-8892914118e0" time="1384423247996" ignored="false" />
     <file path="/shiro.ini" changelist="814003aa-0116-4072-9e91-8892914118e0" time="1384498309885" ignored="false" />
     <file path="/DbConfig.java" changelist="814003aa-0116-4072-9e91-8892914118e0" time="1384336944814" ignored="false" />
-    <file path="/ZHelperConfig.java" changelist="814003aa-0116-4072-9e91-8892914118e0" time="1384341774028" ignored="false" />
+    <file path="/ZHelperConfig.java" changelist="814003aa-0116-4072-9e91-8892914118e0" time="1391433255572" ignored="false" />
     <file path="/ZShiroJdbcRealm.java" changelist="814003aa-0116-4072-9e91-8892914118e0" time="1384494125948" ignored="false" />
     <file path="/ZHelperAuth.java" changelist="814003aa-0116-4072-9e91-8892914118e0" time="1389258721965" ignored="false" />
     <file path="/_panelUser.ftl" changelist="814003aa-0116-4072-9e91-8892914118e0" time="1387420793117" ignored="false" />
@@ -150,7 +162,7 @@
     <file path="/aw.coffee" changelist="814003aa-0116-4072-9e91-8892914118e0" time="1386583451076" ignored="false" />
     <file path="/MCategory.java" changelist="814003aa-0116-4072-9e91-8892914118e0" time="1387444080235" ignored="false" />
     <file path="/_messagebox.ftl" changelist="814003aa-0116-4072-9e91-8892914118e0" time="1389759118756" ignored="false" />
-    <file path="/a001.ftl" changelist="814003aa-0116-4072-9e91-8892914118e0" time="1391347036488" ignored="false" />
+    <file path="/a001.ftl" changelist="814003aa-0116-4072-9e91-8892914118e0" time="1391435263988" ignored="false" />
     <file path="/fcats.ftl" changelist="814003aa-0116-4072-9e91-8892914118e0" time="1387349211689" ignored="false" />
     <file path="/aw.min.js" changelist="814003aa-0116-4072-9e91-8892914118e0" time="1387116615513" ignored="false" />
     <file path="/gridViewJson.ftl" changelist="814003aa-0116-4072-9e91-8892914118e0" time="1387348390962" ignored="false" />
@@ -665,7 +677,7 @@
     <file path="/MAuthor.java" changelist="814003aa-0116-4072-9e91-8892914118e0" time="1391239761685" ignored="false" />
     <file path="/JsonpController.java" changelist="814003aa-0116-4072-9e91-8892914118e0" time="1391336243714" ignored="false" />
     <file path="/Tag.java" changelist="814003aa-0116-4072-9e91-8892914118e0" time="1391330513006" ignored="false" />
-    <file path="/CHANGELOG" changelist="814003aa-0116-4072-9e91-8892914118e0" time="1391358478195" ignored="false" />
+    <file path="/CHANGELOG" changelist="814003aa-0116-4072-9e91-8892914118e0" time="1391435417771" ignored="false" />
     <file path="/MTag.java" changelist="814003aa-0116-4072-9e91-8892914118e0" time="1391337213823" ignored="false" />
     <file path="/ZhelperTest.java" changelist="814003aa-0116-4072-9e91-8892914118e0" time="1391363350326" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -676,7 +688,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CreatePatchCommitExecutor">
-    <option name="PATCH_PATH" value="" />
+    <option name="PATCH_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
@@ -741,16 +753,6 @@
   </component>
   <component name="FrameworkCommandLineHistory">
     <commandsHistory>
-      <command text="mvn tomcat7:run" />
-      <command text="sh offline.sh" />
-      <command text="sh instrument.sh" />
-      <command text="mvn tomcat7:run" />
-      <command text="mvn tomcat7:run" />
-      <command text="mvn tomcat7:run" />
-      <command text="mvn tomcat7:run" />
-      <command text="mvn tomcat7:run" />
-      <command text="mvn tomcat7:run" />
-      <command text="sh offline.sh" />
       <command text="sh instrument.sh" />
       <command text="mvn tomcat7:run" />
       <command text="mvn tomcat7:run" />
@@ -766,6 +768,16 @@
       <command text="mvn tomcat7:run" />
       <command text="mvn tomcat7:run" />
       <command text="git push origin:0.8.1" />
+      <command text="mvn tomcat7:run" />
+      <command text="mvn tomcat7:run" />
+      <command text="mvn tomcat7:run" />
+      <command text="mvn tomcat7:run" />
+      <command text="mvn tomcat7:run" />
+      <command text="mvn tomcat7:run" />
+      <command text="mvn tomcat7:run" />
+      <command text="mvn tomcat7:run" />
+      <command text="mvn tomcat7:run" />
+      <command text="mvn tomcat7:run" />
     </commandsHistory>
   </component>
   <component name="Git.Settings">
@@ -792,28 +804,25 @@
       <MyDateState />
     </option>
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
-  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/app/models/Tag.java" />
-        <option value="$PROJECT_DIR$/content.json" />
-        <option value="$PROJECT_DIR$/src/main/java/app/config/RouteConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/asset/scripts/kopi/punk.js" />
-        <option value="$PROJECT_DIR$/src/main/java/app/controllers/setting/JsonpController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/app/modules/user/MAuthor.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/modules/main/MTag.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/contents/videos/a001.ftl" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/contents/books/a001.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/app/modules/product/MContentVideo.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/app/test/ZhelperTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/zi/helper/ZHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/controllers/contents/BooksController.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/controllers/contents/VideosController.java" />
+        <option value="$PROJECT_DIR$/src/main/db/migrations/20131022085655.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/zi/helper/ZHelperConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/app/controllers/HomeController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/contents/videos/a001.ftl" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/access/login/_panelSignIn.ftl" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/access/login/index.ftl" />
         <option value="$PROJECT_DIR$/CHANGELOG" />
+        <option value="$PROJECT_DIR$/Tasks.me" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -858,6 +867,24 @@
         <PATH_ELEMENT>
           <option name="myItemId" value="Plugins" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginsNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="otm_repo" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Plugins" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginsNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="db-migration" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginNode" />
         </PATH_ELEMENT>
       </PATH>
       <PATH>
@@ -937,27 +964,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="otm_repo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="otm_repo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="otm_repo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="PackagesPane">
         <subPane>
           <PATH>
@@ -1036,6 +1042,27 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="otm_repo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="otm_repo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="otm_repo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1055,35 +1082,28 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="MemberChooser.showClasses" value="true" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
-    <property name="dynamic.classpath" value="false" />
     <property name="Downloaded.Files.Path" value="$PROJECT_DIR$/lib" />
+    <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="zi.helper.test" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/main/webapp/asset/plugins/wysihtml5" />
       <recent name="$PROJECT_DIR$/src/main/webapp/asset/plugins" />
       <recent name="$PROJECT_DIR$/src/main/webapp/asset/plugins/tinymce/js/tinymce/skins" />
       <recent name="$PROJECT_DIR$/src/main/webapp/asset/scripts/kopi" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/asset/css" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="app.modules.main" />
       <recent name="app.controllers.accounts" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="app.modules.main" />
-      <recent name="app.controllers.access" />
-      <recent name="app.controllers" />
-      <recent name="app.controllers.access.login" />
-      <recent name="app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/setting/group" />
@@ -1092,8 +1112,15 @@
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF" />
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/access" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="app.modules.main" />
+      <recent name="app.controllers.access" />
+      <recent name="app.controllers" />
+      <recent name="app.controllers.access.login" />
+      <recent name="app" />
+    </key>
   </component>
-  <component name="RunManager" selected="Maven.otm_repo [-X,clean]">
+  <component name="RunManager" selected="Maven.otm_repo [install]">
     <configuration default="false" name="otm_repo [-X,clean]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -1127,7 +1154,7 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="otm_repo [clean]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
+    <configuration default="false" name="otm_repo [install]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
       <MavenSettings>
         <option name="myGeneralSettings" />
         <option name="myRunnerSettings" />
@@ -1138,7 +1165,7 @@
             </option>
             <option name="goals">
               <list>
-                <option value="clean" />
+                <option value="install" />
               </list>
             </option>
             <option name="profilesMap">
@@ -1153,7 +1180,7 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="otm_repo [install]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
+    <configuration default="false" name="otm_repo [com.carbonfive.db-support:db-migration-maven-plugin:0.9.9-m5:migrate]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
       <MavenSettings>
         <option name="myGeneralSettings" />
         <option name="myRunnerSettings" />
@@ -1164,7 +1191,33 @@
             </option>
             <option name="goals">
               <list>
-                <option value="install" />
+                <option value="com.carbonfive.db-support:db-migration-maven-plugin:0.9.9-m5:migrate" />
+              </list>
+            </option>
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="otm_repo [com.carbonfive.db-support:db-migration-maven-plugin:0.9.9-m5:check]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="com.carbonfive.db-support:db-migration-maven-plugin:0.9.9-m5:check" />
               </list>
             </option>
             <option name="profilesMap">
@@ -1205,38 +1258,14 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="ZhelperTest.rekursiFile" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="app.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="otm_repo" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="app.test" />
-      <option name="MAIN_CLASS_NAME" value="app.test.ZhelperTest" />
-      <option name="METHOD_NAME" value="rekursiFile" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
       <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
       <method />
     </configuration>
     <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
@@ -1261,16 +1290,28 @@
       </MavenSettings>
       <method />
     </configuration>
-    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
-      <TestRunner />
-      <method />
-    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="$PROJECT_DIR$">
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -1299,22 +1340,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
-    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="$PROJECT_DIR$">
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -1599,18 +1624,18 @@
       <item index="6" class="java.lang.String" itemvalue="Maven.tomcat" />
       <item index="7" class="java.lang.String" itemvalue="Maven.otm_repo [org.javalite:activejdbc-instrumentation:1.4.8:instrument]" />
       <item index="8" class="java.lang.String" itemvalue="Maven.otm_repo [-X,clean]" />
-      <item index="9" class="java.lang.String" itemvalue="Maven.otm_repo [clean]" />
-      <item index="10" class="java.lang.String" itemvalue="Maven.otm_repo [install]" />
-      <item index="11" class="java.lang.String" itemvalue="Maven.otm_repo [org.javalite:activejdbc-instrumentation:1.4.9:instrument]" />
-      <item index="12" class="java.lang.String" itemvalue="JUnit.ZhelperTest.rekursiFile" />
+      <item index="9" class="java.lang.String" itemvalue="Maven.otm_repo [install]" />
+      <item index="10" class="java.lang.String" itemvalue="Maven.otm_repo [com.carbonfive.db-support:db-migration-maven-plugin:0.9.9-m5:migrate]" />
+      <item index="11" class="java.lang.String" itemvalue="Maven.otm_repo [com.carbonfive.db-support:db-migration-maven-plugin:0.9.9-m5:check]" />
+      <item index="12" class="java.lang.String" itemvalue="Maven.otm_repo [org.javalite:activejdbc-instrumentation:1.4.9:instrument]" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Maven.otm_repo [-X,clean]" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.ZhelperTest.rekursiFile" />
-        <item index="2" class="java.lang.String" itemvalue="Maven.otm_repo [install]" />
-        <item index="3" class="java.lang.String" itemvalue="Maven.otm_repo [org.javalite:activejdbc-instrumentation:1.4.9:instrument]" />
-        <item index="4" class="java.lang.String" itemvalue="Maven.otm_repo [clean]" />
+        <item index="0" class="java.lang.String" itemvalue="Maven.otm_repo [install]" />
+        <item index="1" class="java.lang.String" itemvalue="Maven.otm_repo [-X,clean]" />
+        <item index="2" class="java.lang.String" itemvalue="Maven.otm_repo [org.javalite:activejdbc-instrumentation:1.4.9:instrument]" />
+        <item index="3" class="java.lang.String" itemvalue="Maven.otm_repo [com.carbonfive.db-support:db-migration-maven-plugin:0.9.9-m5:migrate]" />
+        <item index="4" class="java.lang.String" itemvalue="Maven.otm_repo [com.carbonfive.db-support:db-migration-maven-plugin:0.9.9-m5:check]" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -1717,7 +1742,11 @@
       <created>1391413965536</created>
       <updated>1391413965536</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="- [major] database tabel tags_content dihapus&#10;- [major] database tabel tags berubah sesuai activejdbc sistem polymorphic&#10;- [minor] untuk data autocomplete menggunakan typeaheadjs ajax&#10;- [minor] untuk data multiple input menggunakan select2 ajax&#10;- [major] Relationship (ForeignKey) tb_app , tb_video dan tb_buku untuk tabel content_creator dihapus dikarena ambigous FK&#10;- [minor] CURD content Video dan Buku lebih !hati2 saat update dan delete untuk FK tabel&#10;- [minor] fungsi javascropt selectFunk() digunakan untuk ajax pada select2 multiple input (tags label style)&#10;- [minor] saat delete content ditambahkan fungsi clear folder dan file content">
+      <created>1391414180257</created>
+      <updated>1391414180257</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1742,35 +1771,35 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="48" y="-5" width="1319" height="774" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6912" sideWeight="0.4996066" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16915815" sideWeight="0.64" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16915815" sideWeight="0.648" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24980237" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39872408" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3248" sideWeight="0.5003934" order="13" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.336" sideWeight="0.5003934" order="13" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32964426" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3248" sideWeight="0.4996066" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3248" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32964426" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21085759" sideWeight="0.44" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21085759" sideWeight="0.44" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21085759" sideWeight="0.4401914" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18174666" sideWeight="0.692185" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21085759" sideWeight="0.5584" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.336" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36" sideWeight="0.49881983" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21085759" sideWeight="0.5582137" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3508772" sideWeight="0.4996066" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2272" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3248" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39872408" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35885167" sideWeight="0.49881983" order="7" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -1846,58 +1875,76 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/../../../../maven-repo/org/javalite/activejdbc/1.4.9.1/activejdbc-1.4.9.1.jar!/org/javalite/activejdbc/Model.class">
+    <entry file="jar:///opt/jdk1.7.0_45/src.zip!/java/io/FileInputStream.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="16" selection-start="2222" selection-end="2222" vertical-scroll-proportion="0.34814814" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/modules/product/MContentVideo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="32" selection-start="2041" selection-end="2049" vertical-scroll-proportion="0.59469026">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/contents/books/a001.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="56" selection-start="1986" selection-end="1986" vertical-scroll-proportion="-26.153847" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/modules/main/MTag.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="22" selection-start="1193" selection-end="1193" vertical-scroll-proportion="0.3327645" />
+        <state line="99" column="11" selection-start="2822" selection-end="2822" vertical-scroll-proportion="0.3327787" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/asset/scripts/kopi/punk.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="39" selection-start="2640" selection-end="2640" vertical-scroll-proportion="0.80375427" />
+        <state line="69" column="54" selection-start="2600" selection-end="2600" vertical-scroll-proportion="0.5873544" />
       </provider>
     </entry>
-    <entry file="jar:///opt/jdk1.7.0_45/src.zip!/java/io/File.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/contents/videos/a001.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1030" column="9" selection-start="42690" selection-end="42690" vertical-scroll-proportion="0.0">
+        <state line="18" column="53" selection-start="938" selection-end="938" vertical-scroll-proportion="0.5338078" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/access/login/_panelSignIn.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="74" selection-start="912" selection-end="920" vertical-scroll-proportion="0.6405694" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/access/login/index.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="87" selection-start="4790" selection-end="4790" vertical-scroll-proportion="0.5338078" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/controllers/HomeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="81" column="13" selection-start="3265" selection-end="3265" vertical-scroll-proportion="1.8367347" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/zi/helper/ZHelperConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="28" selection-start="2487" selection-end="2487" vertical-scroll-proportion="0.9916805" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CHANGELOG">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="69" selection-start="724" selection-end="724" vertical-scroll-proportion="0.30612245" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tasks.me">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="29" selection-start="1788" selection-end="1788" vertical-scroll-proportion="0.20408164" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.6014235">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/app/test/ContentBuilderTest.java">
+    <entry file="file://$PROJECT_DIR$/gitRepoSetting">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="7" selection-start="773" selection-end="773" vertical-scroll-proportion="0.10016695" />
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../../../maven-repo/org/javalite/activeweb/1.10/activeweb-1.10-sources.jar!/org/javalite/activeweb/HttpSupport.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1290" column="21" selection-start="42214" selection-end="42214" vertical-scroll-proportion="0.3327645">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/app/test/ZhelperTest.java">
+    <entry file="file://$PROJECT_DIR$/listdetailkontent.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="27" selection-start="811" selection-end="811" vertical-scroll-proportion="0.26666668" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nb-configuration.xml">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
@@ -1906,42 +1953,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="233" column="50" selection-start="10097" selection-end="10097" vertical-scroll-proportion="1.7687075">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/zi/helper/ZHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="193" column="32" selection-start="6059" selection-end="6059" vertical-scroll-proportion="0.034013607">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/controllers/contents/VideosController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="328" column="13" selection-start="16163" selection-end="16163" vertical-scroll-proportion="0.034013607">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/controllers/contents/BooksController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="343" column="35" selection-start="16661" selection-end="16680" vertical-scroll-proportion="0.034013607">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CHANGELOG">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="53" selection-start="629" selection-end="629" vertical-scroll-proportion="0.27303755">
+        <state line="257" column="24" selection-start="10908" selection-end="10908" vertical-scroll-proportion="0.36106488">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="0" column="8" selection-start="8" selection-end="8" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>

@@ -252,12 +252,12 @@
             <version>1.2.2</version>
         </dependency>
         <!--end apache shiro-->
-        <!-- epub converting-->
+        <!--&lt;!&ndash; epub converting&ndash;&gt;
         <dependency>
             <groupId>com.gmail.elinares</groupId>
             <artifactId>LRFTools</artifactId>
             <version>0.9.241</version>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>com.sun</groupId>
             <artifactId>tools</artifactId>

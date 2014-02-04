@@ -7,3 +7,4 @@ ver.0.8.1
 - [minor] CURD content Video dan Buku lebih !hati2 saat update dan delete untuk FK tabel
 - [minor] fungsi javascropt selectFunk() digunakan untuk ajax pada select2 multiple input (tags label style)
 - [minor] saat delete content ditambahkan fungsi clear folder dan file content
+- [minor] setting file sys.conf dirubah letak di resource web context

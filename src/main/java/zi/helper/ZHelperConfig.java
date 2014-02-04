@@ -25,7 +25,6 @@ package zi.helper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.FileInputStream;
 import java.util.Properties;
 
 public class ZHelperConfig {
@@ -34,7 +33,7 @@ public class ZHelperConfig {
     private static Properties props = new Properties();
 
     public ZHelperConfig() {
-        logger.info(System.getProperty("user.dir"));
+        //logger.info(ZHelperConfig.class.getResource("sys.conf").getPath());
     }
 
     public static synchronized ZHelperConfig getInstance() {
@@ -76,11 +75,13 @@ public class ZHelperConfig {
     }
 
     public void setProperty() {
-        FileInputStream f;
+        //FileInputStream f;
         try {
-            f = new FileInputStream(System.getProperty("user.dir") + "/conf/sys.conf");
+//            File file =  new File(ZHelperConfig.class.getResource(""));
+            //f = new FileInputStream(System.getProperty("user.dir") + "/conf/sys.conf");
+            // f = new FileInputStream(ZHelperConfig.class.getResource("/sys.conf").getPath());
             System.err.println(System.getProperty("user.dir") + "/conf/sys.conf");
-            ZHelperConfig.props.load(f);
+            ZHelperConfig.props.load(ZHelperConfig.class.getResourceAsStream("/sys.conf"));
         } catch (Exception ex) {
             logger.error(ex.getMessage());
         }

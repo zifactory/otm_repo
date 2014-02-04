@@ -14,12 +14,13 @@
         -> Mkdir sesuai ID user dimana utk menyimpan file data fisik di setiap folder di server []
     -> Master Setting
         -> AB transaksi content
-        -> AB master setting category, kabupaten, kota
+        -> AB master setting category, kabupaten, kota [x]
         -> optional author dan penerbit diisi oleh si user(publisher)
         -> Category Setting {CRUD} [x] sip!!!
         -> Kota Setting {CRUD} [x] sip!!!
         -> Kabupaten Setting {CRUD} [x] sip!!!
-        -> untuk administrator dibuat backend panel
+        -> untuk administrator dibuat backend panel [x]
+        -> CRUD dan upload file kontent {App,book,video} [x]
 
     -> Inventory Item Content-> All Content | Books | Apps/Games | Videos :: Filter by ID Route
     -> Trading Item Content
@@ -28,12 +29,12 @@
 
 
 notes :: {
-- module dibikin arrayList -> dikumpulin jadi satu user? ini punya module apa aj
-- module user tiap create baru dibuat folder
+- [x] module dibikin arrayList -> dikumpulin jadi satu user? ini punya module apa aj
+- [x] module user tiap create baru dibuat folder
                             -> [/p/{user_id}/i] :i image
                             -> [/p/{user_id}/f] :f file
                             -> [/p/{content_id}/v] :v video
-- module content tiap create baru dibuat folder
+- [x] module content tiap create baru dibuat folder
                             -> [/c/{content_id}/i] :i image
                             -> [/c/{content_id}/f] :f file
                             -> [/c/{content_id}/v] :v video
@@ -54,11 +55,10 @@ notes :: {
     :: untuk content aplikasi | videos  yg ditampilkan publisher :searching fn order by it
     :: untuk content buku yg ditampilkan author2nya :searching fn order by it
 - Prioritas searching content dimulai dari tag -> kategori -> judul
-- buat tag pake multi tag select2 ... !high prioritas
-- buat author pake multi tag select2 ... !high prioritas
+- [x] buat tag pake multi tag select2 ... !high prioritas
+- [x] buat author pake multi tag select2 ... !high prioritas
 - [x] a Error UI handle => masih belum fix nunggu release milestone activeweb
 - [x] UI DataTable gridViewJson url = http://localhost:8080/otm_repo/3/cats/jp?callback=jQuery110107553695579990745_1387186073970&sEcho=1&iColumns=5&sColumns=&iDisplayStart=0&iDisplayLength=5&mDataProp_0=0&mDataProp_1=1&mDataProp_2=2&mDataProp_3=3&mDataProp_4=4&sSearch=66&bRegex=false&sSearch_0=&bRegex_0=false&bSearchable_0=true&sSearch_1=&bRegex_1=false&bSearchable_1=true&sSearch_2=&bRegex_2=false&bSearchable_2=true&sSearch_3=&bRegex_3=false&bSearchable_3=true&sSearch_4=&bRegex_4=false&bSearchable_4=true&iSortCol_0=1&sSortDir_0=asc&iSortingCols=1&bSortable_0=true&bSortable_1=true&bSortable_2=true&bSortable_3=true&bSortable_4=true&_=1387186073971
 - request pending
 - [x] Function filter HashMap for Record  is_null , is_empty
-
 }

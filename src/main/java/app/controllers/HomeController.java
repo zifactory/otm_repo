@@ -27,19 +27,15 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.javalite.activejdbc.LazyList;
 import org.javalite.activeweb.AppController;
 import zi.helper.ZHelper;
-import zi.helper.ZUtilContent;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
 import zi.helper.ZHelperModel;
+import zi.helper.ZUtilContent;
 
 public class HomeController extends AppController {
 
     public void index() {
         String[] kategori = {"Kesehatan & Fitnes", "Matematika & Fisika", "Manajemen Sekolah"};
         String[] produk = {"camelot.png", "moderncombat.png", "robot.jpg",
-            "tesla.png", "logo.png"};
+                "tesla.png", "logo.png"};
         /*
          *   content.content_bean.judul
          content.content_bean.publisher

@@ -16,7 +16,7 @@
                     </div>
                     <div class="control-group">
                         <div class="input-icon left">
-                            <i class="fa fa-key"></i><input type="text" class="m-wrap" name="password"
+                            <i class="fa fa-key"></i><input type="password" class="m-wrap" name="password"
                                                             placeholder="Password"/>
                         </div>
                     </div>
